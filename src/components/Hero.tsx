@@ -51,7 +51,7 @@ export default function Hero() {
           style={{ y: y2 }}
           className="absolute top-[8%] md:top-[25%] left-[8%] md:left-[5%] lg:left-[8%] z-20"
         >
-          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-emboss whitespace-nowrap">
+          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-vintage-ink drop-shadow-sm whitespace-nowrap">
             Quyn
           </h1>
           <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:ml-2 text-vintage-ink/60">
@@ -67,7 +67,7 @@ export default function Hero() {
           style={{ y: y2 }}
           className="absolute bottom-[10%] md:bottom-[25%] right-[8%] md:right-[5%] lg:right-[8%] z-20 text-right"
         >
-          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-emboss whitespace-nowrap">
+          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-vintage-ink drop-shadow-sm whitespace-nowrap">
             &amp; Nhàn
           </h1>
           <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:mr-2 text-vintage-ink/60">
