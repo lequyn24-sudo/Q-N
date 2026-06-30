@@ -29,7 +29,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
           style={{ y: y1 }}
-          className="relative w-[80%] md:w-[35%] lg:w-[30%] h-[50vh] md:h-[70vh] z-10 floral-lace-wrapper"
+          className="relative w-[80%] md:w-[45%] lg:w-[40%] aspect-[3/4] md:aspect-[4/5] z-10 floral-lace-wrapper max-h-[80vh]"
         >
           <div className="floral-lace-frame w-full h-full relative overflow-hidden grayscale-[50%] sepia-[10%] contrast-110">
             <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
@@ -49,12 +49,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[8%] md:top-[25%] left-[8%] md:left-[5%] lg:left-[10%] z-20"
+          className="absolute top-[8%] md:top-[25%] left-[8%] md:left-[5%] lg:left-[8%] z-20"
         >
-          <h1 className="font-serif text-[5rem] md:text-7xl lg:text-8xl leading-none tracking-tight text-emboss">
+          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-emboss whitespace-nowrap">
             Quyn
           </h1>
-          <p className="font-jetbrains text-xs md:text-sm tracking-widest uppercase mt-4 md:ml-2 text-vintage-ink/60">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:ml-2 text-vintage-ink/60">
             The groom
           </p>
         </motion.div>
@@ -65,12 +65,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[10%] md:bottom-[25%] right-[8%] md:right-[5%] lg:right-[10%] z-20 text-right"
+          className="absolute bottom-[10%] md:bottom-[25%] right-[8%] md:right-[5%] lg:right-[8%] z-20 text-right"
         >
-          <h1 className="font-serif text-[5rem] md:text-7xl lg:text-8xl leading-none tracking-tight text-emboss">
+          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-emboss whitespace-nowrap">
             &amp; Nhàn
           </h1>
-          <p className="font-jetbrains text-xs md:text-sm tracking-widest uppercase mt-4 md:mr-2 text-vintage-ink/60">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:mr-2 text-vintage-ink/60">
             The bride
           </p>
         </motion.div>
