@@ -16,10 +16,10 @@ export default function RSVP() {
   };
 
   return (
-    <section id="rsvp" className="py-20 md:py-32 px-6 bg-[#faf9f6]">
+    <section id="rsvp" className="py-20 md:py-32 px-6 bg-retro-cream/50">
       <div className="container mx-auto max-w-2xl text-center">
-        <h2 className="font-serif text-5xl text-[#1a1a1a] mb-6">RSVP</h2>
-        <p className="text-gray-500 font-light mb-12 md:mb-16">
+        <h2 className="font-serif text-5xl text-retro-ink mb-6">RSVP</h2>
+        <p className="text-retro-brown/60 font-light mb-12 md:mb-16">
           Kindly respond by August 1st, 2026.
         </p>
 

@@ -19,7 +19,7 @@ export default function WeddingDetails() {
   ];
 
   return (
-    <section className="py-20 md:py-40 px-6 bg-white">
+    <section className="py-20 md:py-40 px-6 bg-retro-cream">
       <div className="container mx-auto max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 text-center">
           {details.map((detail, i) => (
@@ -30,8 +30,8 @@ export default function WeddingDetails() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: i * 0.2 }}
             >
-              <h3 className="font-serif text-3xl mb-6 text-[#1a1a1a]">{detail.title}</h3>
-              <p className="text-gray-600 font-light leading-relaxed whitespace-pre-line">
+              <h3 className="font-serif text-2xl mb-6 text-retro-ink">{detail.title}</h3>
+              <p className="text-sm font-light text-retro-brown/70 leading-loose whitespace-pre-line">
                 {detail.content}
               </p>
             </motion.div>

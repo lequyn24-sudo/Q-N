@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Story() {
   return (
-    <section id="story" className="py-20 md:py-48 px-6 bg-white">
+    <section id="story" className="py-20 md:py-48 px-6 bg-retro-cream">
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
           <motion.div 
@@ -14,7 +14,7 @@ export default function Story() {
             transition={{ duration: 0.8 }}
             className="w-full md:w-1/3"
           >
-            <h2 className="font-serif text-5xl md:text-6xl text-[#1a1a1a]">
+            <h2 className="font-serif text-5xl md:text-6xl text-retro-ink">
               Our<br/><span className="italic text-[#c4b5a2]">Story</span>
             </h2>
             <div className="w-12 h-[1px] bg-[#1a1a1a] mt-8" />

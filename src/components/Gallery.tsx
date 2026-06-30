@@ -12,11 +12,11 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-20 md:py-32 px-6 bg-[#faf9f6]">
+    <section id="gallery" className="py-20 md:py-32 px-6 bg-retro-cream">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 md:mb-24">
-          <h2 className="font-serif text-5xl text-[#1a1a1a] mb-4">Moments</h2>
-          <p className="text-sm tracking-widest uppercase text-gray-500">A Glimpse Into Our Journey</p>
+          <h2 className="font-serif text-5xl text-retro-ink mb-4">Moments</h2>
+          <p className="text-sm tracking-widest uppercase text-retro-brown/60">A Glimpse Into Our Journey</p>
         </div>
 
         <div className="grid grid-cols-12 gap-6 md:gap-12">

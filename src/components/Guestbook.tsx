@@ -23,11 +23,11 @@ export default function Guestbook() {
   };
 
   return (
-    <section className="py-20 md:py-32 px-6 bg-white">
+    <section className="py-20 md:py-32 px-6 bg-retro-cream">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-serif text-5xl text-[#1a1a1a] mb-4">Guestbook</h2>
-          <p className="text-gray-500 font-light">Leave a note for the couple</p>
+          <h2 className="font-serif text-5xl text-retro-ink mb-4">Guestbook</h2>
+          <p className="text-retro-brown/60 font-light">Leave a note for the couple</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">

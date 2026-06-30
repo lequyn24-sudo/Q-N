@@ -11,15 +11,18 @@ export default function Timeline() {
   ];
 
   return (
-    <section id="details" className="py-20 md:py-32 px-6 bg-[#1a1a1a] text-white">
-      <div className="container mx-auto max-w-4xl">
+    <section id="details" className="relative py-20 md:py-32 px-6 bg-retro-brown text-retro-cream overflow-hidden">
+      {/* Background Texture */}
+      <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }} />
+      
+      <div className="container mx-auto max-w-4xl relative z-10">
         <h2 className="font-serif text-5xl text-center mb-16 md:mb-24">
-          The <span className="italic text-[#c4b5a2]">Itinerary</span>
+          The <span className="italic text-retro-gold">Itinerary</span>
         </h2>
         
-        <div className="relative border-l border-[#c4b5a2]/30 md:border-none space-y-16 md:space-y-24">
+        <div className="relative border-l border-retro-gold/30 md:border-none space-y-16 md:space-y-24">
           {/* Center line for desktop */}
-          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[1px] bg-[#c4b5a2]/30 -translate-x-1/2" />
+          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[1px] bg-retro-gold/30 -translate-x-1/2" />
 
           {events.map((event, i) => (
             <motion.div 
@@ -27,41 +30,21 @@ export default function Timeline() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className="relative pl-8 md:pl-0 flex flex-col md:flex-row md:items-center"
+              transition={{ duration: 0.8, delay: i * 0.2 }}
+              className={`flex flex-col md:flex-row items-start md:items-center relative pl-8 md:pl-0 ${
+                i % 2 === 0 ? "md:justify-start" : "md:justify-end"
+              }`}
             >
               {/* Dot */}
-              <div className="absolute w-3 h-3 bg-[#c4b5a2] rounded-full -left-[6px] md:left-1/2 md:-translate-x-[6px] top-2 md:top-1/2 md:-translate-y-1/2 z-10" />
-              
-              {/* Left side text (for even index on desktop) */}
-              <div className={`md:w-1/2 ${i % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:hidden'}`}>
-                {i % 2 === 0 && (
-                  <>
-                    <p className="font-serif text-2xl text-[#c4b5a2] mb-2">{event.time}</p>
-                    <h3 className="text-xl tracking-wide uppercase mb-4">{event.title}</h3>
-                    <p className="text-gray-400 font-light leading-relaxed">{event.desc}</p>
-                  </>
-                )}
+              <div className="absolute left-[-5px] md:left-1/2 w-3 h-3 rounded-full bg-retro-gold md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2 shadow-[0_0_10px_rgba(196,166,97,0.5)] z-10" />
+              {/* Mobile and desktop text container */}
+              <div className={`w-full md:w-[45%] ${i % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"}`}>
+                <p className="font-serif text-retro-gold text-2xl mb-2">{event.time}</p>
+                <h3 className="font-serif text-2xl mb-3">{event.title}</h3>
+                <p className="text-sm font-light text-retro-cream/70 leading-relaxed">
+                  {event.desc}
+                </p>
               </div>
-
-              {/* Right side text (for odd index on desktop, and all items on mobile) */}
-              <div className={`md:w-1/2 ${i % 2 !== 0 ? 'md:pl-16' : 'md:hidden'}`}>
-                {i % 2 !== 0 && (
-                  <>
-                    <p className="font-serif text-2xl text-[#c4b5a2] mb-2">{event.time}</p>
-                    <h3 className="text-xl tracking-wide uppercase mb-4">{event.title}</h3>
-                    <p className="text-gray-400 font-light leading-relaxed">{event.desc}</p>
-                  </>
-                )}
-              </div>
-
-              {/* Mobile text container */}
-              <div className="md:hidden">
-                <p className="font-serif text-2xl text-[#c4b5a2] mb-2">{event.time}</p>
-                <h3 className="text-xl tracking-wide uppercase mb-4">{event.title}</h3>
-                <p className="text-gray-400 font-light leading-relaxed">{event.desc}</p>
-              </div>
-
             </motion.div>
           ))}
         </div>

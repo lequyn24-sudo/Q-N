@@ -53,12 +53,12 @@ export default function Navigation() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className={cn(
           "fixed top-0 inset-x-0 z-50 transition-colors duration-300",
-          scrolled || menuOpen ? "bg-[#faf9f6]/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+          scrolled || menuOpen ? "bg-retro-brown/95 backdrop-blur-md shadow-sm py-4 text-retro-cream" : "bg-transparent py-6 text-retro-brown"
         )}
       >
         <div className="container mx-auto px-6 flex justify-between items-center max-w-7xl">
-          <a href="#" onClick={() => setMenuOpen(false)} className="font-serif text-xl md:text-2xl tracking-widest uppercase relative z-50">
-            Quyn <span className="text-[#c4b5a2] mx-1">&amp;</span> Nhàn
+          <a href="#" onClick={() => setMenuOpen(false)} className="font-serif text-xl md:text-2xl tracking-widest uppercase relative z-50 text-inherit">
+            Quyn <span className="text-retro-gold mx-1">&amp;</span> Nhàn
           </a>
           
           <ul className="hidden md:flex gap-10">
@@ -66,7 +66,7 @@ export default function Navigation() {
               <li key={link.name}>
                 <a 
                   href={link.href}
-                  className="text-sm tracking-widest uppercase hover:text-[#c4b5a2] transition-colors duration-300"
+                  className="text-sm tracking-widest uppercase hover:text-retro-gold transition-colors duration-300"
                 >
                   {link.name}
                 </a>
@@ -75,7 +75,7 @@ export default function Navigation() {
           </ul>
 
           <button 
-            className="md:hidden relative z-50 p-2 -mr-2 text-[#1a1a1a]"
+            className="md:hidden relative z-50 p-2 -mr-2 text-inherit"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
           >
@@ -91,7 +91,7 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-20%" }}
             transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
-            className="fixed inset-0 z-40 bg-[#faf9f6] flex flex-col items-center justify-center pt-20"
+            className="fixed inset-0 z-40 bg-retro-brown flex flex-col items-center justify-center pt-20"
           >
             <ul className="flex flex-col items-center gap-12">
               {links.map((link, i) => (
@@ -104,7 +104,7 @@ export default function Navigation() {
                   <a 
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="font-serif text-4xl tracking-widest uppercase text-[#1a1a1a] hover:text-[#c4b5a2] transition-colors"
+                    className="font-serif text-4xl tracking-widest uppercase text-retro-cream hover:text-retro-gold transition-colors"
                   >
                     {link.name}
                   </a>
