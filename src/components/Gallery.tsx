@@ -26,14 +26,16 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: idx * 0.2, ease: "easeOut" }}
-              className={`relative w-full md:w-1/3 aspect-[3/4] border border-vintage-ink/10 p-2 grayscale-[30%] sepia-[15%] hover:grayscale-0 hover:sepia-0 transition-all duration-700 ${idx === 1 ? 'md:-translate-y-12' : ''}`}
+              className={`relative w-full md:w-1/3 aspect-[3/4] p-2 grayscale-[30%] sepia-[15%] hover:grayscale-0 hover:sepia-0 transition-all duration-700 embossed-frame ${idx === 1 ? 'md:-translate-y-12' : ''}`}
             >
-              <Image 
-                src={src} 
-                alt={`Gallery ${idx + 1}`} 
-                fill 
-                className="object-cover"
-              />
+              <div className="w-full h-full relative overflow-hidden embossed-frame-inner">
+                <Image 
+                  src={src} 
+                  alt={`Gallery ${idx + 1}`} 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
             </motion.div>
           ))}
         </div>

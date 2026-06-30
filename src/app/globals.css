@@ -21,6 +21,19 @@
     1px 1px 2px rgba(52, 38, 25, 0.2);
 }
 
+@utility embossed-frame {
+  border: 12px solid var(--color-vintage-bg);
+  box-shadow: 
+    4px 4px 10px rgba(52, 38, 25, 0.15), 
+    -4px -4px 10px rgba(255, 255, 255, 0.9);
+}
+
+@utility embossed-frame-inner {
+  box-shadow: 
+    inset 3px 3px 6px rgba(52, 38, 25, 0.25), 
+    inset -3px -3px 6px rgba(255, 255, 255, 0.6);
+}
+
 :root {
   --background: #e9e4d8;
   --foreground: #342619;

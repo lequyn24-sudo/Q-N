@@ -20,13 +20,15 @@ export default function WeddingDetails() {
             transition={{ duration: 0.8 }}
             className="w-full md:w-1/2"
           >
-            <div className="relative aspect-[4/5] border p-2 border-vintage-ink/20 grayscale-[20%] sepia-[10%]">
-              <Image 
-                src="/images/gallery-4.png" 
-                alt="Venue" 
-                fill 
-                className="object-cover"
-              />
+            <div className="relative aspect-[4/5] p-2 grayscale-[20%] sepia-[10%] embossed-frame">
+              <div className="w-full h-full relative overflow-hidden embossed-frame-inner">
+                <Image 
+                  src="/images/gallery-4.png" 
+                  alt="Venue" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
             </div>
           </motion.div>
           

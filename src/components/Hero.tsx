@@ -29,9 +29,9 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
           style={{ y: y1 }}
-          className="relative w-[85%] md:w-[45%] h-[60vh] md:h-[75vh] z-10"
+          className="relative w-[85%] md:w-[45%] h-[60vh] md:h-[75vh] z-10 embossed-frame"
         >
-          <div className="w-full h-full relative overflow-hidden grayscale-[50%] sepia-[10%] contrast-110">
+          <div className="w-full h-full relative overflow-hidden grayscale-[50%] sepia-[10%] contrast-110 embossed-frame-inner">
             <Image 
               src="/images/hero.png" 
               alt="Quyn & Nhàn" 
