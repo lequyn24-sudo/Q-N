@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
+import { Inter, Cormorant_Garamond, JetBrains_Mono, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -21,6 +21,12 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const greatVibes = Great_Vibes({
+  weight: ['400'],
+  variable: "--font-script",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Quyn & Nhàn | Vintage Dream",
   description: "Our wedding celebration.",
@@ -34,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-vintage-bg text-vintage-ink">
         <SmoothScroll>{children}</SmoothScroll>

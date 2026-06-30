@@ -31,7 +31,7 @@ export default function RSVP() {
           <div className="absolute bottom-4 right-4 w-12 h-12 border-b border-r border-vintage-ink/30" />
 
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-vintage-ink mb-4">R. S. V. P.</h2>
+            <h2 className="font-script text-6xl md:text-8xl text-emboss mb-4 relative z-10">R. S. V. P.</h2>
             <p className="font-serif italic text-vintage-ink/70">Kindly reply by the 1st of August</p>
           </div>
 

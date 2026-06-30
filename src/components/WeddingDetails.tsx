@@ -51,10 +51,12 @@ export default function WeddingDetails() {
               </address>
             </div>
             
-            <div>
-              <h3 className="font-serif text-3xl mb-4 italic">Dress Code</h3>
-              <p className="font-serif text-lg text-vintage-ink/80 leading-relaxed">
-                We kindly request formal attire. Think classic, elegant, and timeless.
+            <div className="text-center py-8">
+              <h3 className="font-script text-6xl md:text-8xl mb-6 text-emboss relative z-10 -ml-4">
+                Dress-code
+              </h3>
+              <p className="font-jetbrains text-xs tracking-widest text-vintage-ink/80 leading-relaxed max-w-sm mx-auto uppercase">
+                Minimalism and elegance - this is the perfect formula for our guests! We will be glad to see you
               </p>
             </div>
 
