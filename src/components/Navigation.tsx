@@ -53,12 +53,12 @@ export default function Navigation() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className={cn(
           "fixed top-0 inset-x-0 z-50 transition-colors duration-300",
-          scrolled || menuOpen ? "bg-retro-brown/95 backdrop-blur-md shadow-sm py-4 text-retro-cream" : "bg-transparent py-6 text-retro-brown"
+          scrolled || menuOpen ? "bg-vintage-bg/95 backdrop-blur-md shadow-sm border-b border-vintage-ink/5 py-4 text-vintage-ink" : "bg-transparent py-6 text-vintage-ink"
         )}
       >
         <div className="container mx-auto px-6 flex justify-between items-center max-w-7xl">
           <a href="#" onClick={() => setMenuOpen(false)} className="font-serif text-xl md:text-2xl tracking-widest uppercase relative z-50 text-inherit">
-            Quyn <span className="text-retro-gold mx-1">&amp;</span> Nhàn
+            Quyn <span className="text-vintage-accent mx-1">&amp;</span> Nhàn
           </a>
           
           <ul className="hidden md:flex gap-10">
@@ -66,7 +66,7 @@ export default function Navigation() {
               <li key={link.name}>
                 <a 
                   href={link.href}
-                  className="text-sm tracking-widest uppercase hover:text-retro-gold transition-colors duration-300"
+                  className="text-sm tracking-widest uppercase hover:text-vintage-accent transition-colors duration-300"
                 >
                   {link.name}
                 </a>

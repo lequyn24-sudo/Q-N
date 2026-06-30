@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, Playfair_Display, UnifrakturMaguntia } from "next/font/google";
+import { Inter, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,22 +15,15 @@ const cormorant = Cormorant_Garamond({
   style: ['normal', 'italic'],
 });
 
-const playfair = Playfair_Display({
-  weight: ['400', '600', '700'],
-  variable: "--font-playfair",
-  subsets: ["latin", "vietnamese"],
-  style: ['normal', 'italic'],
-});
-
-const unifraktur = UnifrakturMaguntia({
-  weight: ['400'],
-  variable: "--font-unifraktur",
+const jetbrains = JetBrains_Mono({
+  weight: ['300', '400', '500'],
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "The Wedding Post | Quyn & Nhàn",
-  description: "Our story, itinerary, and RSVP.",
+  title: "Quyn & Nhàn | Vintage Dream",
+  description: "Our wedding celebration.",
 };
 
 export default function RootLayout({
@@ -40,10 +34,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${playfair.variable} ${unifraktur.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="h-full bg-newspaper-bg text-newspaper-ink overflow-hidden overscroll-none">
-        {children}
+      <body className="min-h-full flex flex-col bg-vintage-bg text-vintage-ink">
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

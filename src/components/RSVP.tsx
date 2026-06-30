@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { useState } from "react";
 
 export default function RSVP() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
@@ -16,77 +15,74 @@ export default function RSVP() {
   };
 
   return (
-    <section id="rsvp" className="py-20 md:py-32 px-6 bg-retro-cream/50">
-      <div className="container mx-auto max-w-2xl text-center">
-        <h2 className="font-serif text-5xl text-retro-ink mb-6">RSVP</h2>
-        <p className="text-retro-brown/60 font-light mb-12 md:mb-16">
-          Kindly respond by August 1st, 2026.
-        </p>
+    <section id="rsvp" className="py-24 md:py-40 px-6 bg-vintage-bg">
+      <div className="container mx-auto max-w-3xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="border border-vintage-ink/20 p-8 md:p-16 relative"
+        >
+          {/* Corner accents */}
+          <div className="absolute top-4 left-4 w-12 h-12 border-t border-l border-vintage-ink/30" />
+          <div className="absolute top-4 right-4 w-12 h-12 border-t border-r border-vintage-ink/30" />
+          <div className="absolute bottom-4 left-4 w-12 h-12 border-b border-l border-vintage-ink/30" />
+          <div className="absolute bottom-4 right-4 w-12 h-12 border-b border-r border-vintage-ink/30" />
 
-        {status === "success" ? (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white p-10 md:p-12 rounded-sm shadow-sm flex flex-col items-center"
-          >
-            <div className="w-16 h-16 bg-[#c4b5a2]/20 rounded-full flex items-center justify-center mb-6">
-              <Check className="text-[#c4b5a2] w-8 h-8" />
-            </div>
-            <h3 className="font-serif text-3xl mb-2 text-[#1a1a1a]">Thank You</h3>
-            <p className="text-gray-500 font-light">Your response has been recorded.</p>
-          </motion.div>
-        ) : (
-          <form onSubmit={handleSubmit} className="text-left space-y-8 bg-white p-6 md:p-12 shadow-sm rounded-sm">
-            <div className="space-y-2">
-              <label htmlFor="name" className="text-sm tracking-widest uppercase text-gray-500 block">
-                Full Name(s)
-              </label>
-              <input
-                type="text"
-                id="name"
-                required
-                className="w-full border-b border-gray-300 py-3 md:py-4 bg-transparent focus:outline-none focus:border-[#c4b5a2] transition-colors"
-                placeholder="Jane & John Doe"
-              />
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-4xl md:text-5xl text-vintage-ink mb-4">R. S. V. P.</h2>
+            <p className="font-serif italic text-vintage-ink/70">Kindly reply by the 1st of August</p>
+          </div>
 
-            <div className="space-y-4">
-              <label className="text-sm tracking-widest uppercase text-gray-500 block">
-                Will you attend?
-              </label>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <label className="flex items-center gap-3 cursor-pointer group py-2 sm:py-0">
-                  <input type="radio" name="attending" value="yes" required className="accent-[#c4b5a2] w-4 h-4" />
-                  <span className="text-gray-700 group-hover:text-[#1a1a1a] transition-colors">Joyfully Accept</span>
+          {status === "success" ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex flex-col items-center py-10"
+            >
+              <h3 className="font-serif text-3xl mb-2 text-vintage-ink italic">Thank You</h3>
+              <p className="font-jetbrains text-xs tracking-widest uppercase text-vintage-ink/70">Your response has been recorded</p>
+            </motion.div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-8 font-serif">
+              <div>
+                <label className="block text-vintage-ink uppercase tracking-[0.2em] text-xs font-jetbrains mb-2">Name(s)</label>
+                <input 
+                  type="text" 
+                  required
+                  className="w-full bg-transparent border-b border-vintage-ink/30 py-2 focus:outline-none focus:border-vintage-ink text-vintage-ink transition-colors"
+                  placeholder="M..................................."
+                />
+              </div>
+              
+              <div className="flex flex-col md:flex-row gap-6 mt-8">
+                <label className="flex items-center gap-3 cursor-pointer group">
+                  <div className="w-5 h-5 border border-vintage-ink/30 rounded flex items-center justify-center group-hover:border-vintage-ink transition-colors">
+                    <input type="radio" name="attending" value="yes" required className="appearance-none w-3 h-3 checked:bg-vintage-ink rounded-sm" />
+                  </div>
+                  <span className="text-vintage-ink/90 text-lg italic">Joyfully Accepts</span>
                 </label>
-                <label className="flex items-center gap-3 cursor-pointer group py-2 sm:py-0">
-                  <input type="radio" name="attending" value="no" required className="accent-[#c4b5a2] w-4 h-4" />
-                  <span className="text-gray-700 group-hover:text-[#1a1a1a] transition-colors">Regretfully Decline</span>
+                <label className="flex items-center gap-3 cursor-pointer group">
+                  <div className="w-5 h-5 border border-vintage-ink/30 rounded flex items-center justify-center group-hover:border-vintage-ink transition-colors">
+                    <input type="radio" name="attending" value="no" required className="appearance-none w-3 h-3 checked:bg-vintage-ink rounded-sm" />
+                  </div>
+                  <span className="text-vintage-ink/90 text-lg italic">Regretfully Declines</span>
                 </label>
               </div>
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="dietary" className="text-sm tracking-widest uppercase text-gray-500 block">
-                Dietary Restrictions
-              </label>
-              <input
-                type="text"
-                id="dietary"
-                className="w-full border-b border-gray-300 py-3 md:py-4 bg-transparent focus:outline-none focus:border-[#c4b5a2] transition-colors"
-                placeholder="None"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={status === "submitting"}
-              className="w-full bg-[#1a1a1a] text-white py-4 md:py-5 uppercase tracking-widest text-sm hover:bg-[#2a2a2a] transition-colors disabled:opacity-70 mt-4"
-            >
-              {status === "submitting" ? "Sending..." : "Submit RSVP"}
-            </button>
-          </form>
-        )}
+              
+              <div className="pt-8 text-center">
+                <button 
+                  type="submit" 
+                  disabled={status === "submitting"}
+                  className="bg-transparent text-vintage-ink border border-vintage-ink px-10 py-3 font-jetbrains uppercase tracking-[0.2em] text-xs hover:bg-vintage-ink hover:text-vintage-bg transition-all duration-300 disabled:opacity-50"
+                >
+                  {status === "submitting" ? "Sending..." : "Send Reply"}
+                </button>
+              </div>
+            </form>
+          )}
+        </motion.div>
       </div>
     </section>
   );

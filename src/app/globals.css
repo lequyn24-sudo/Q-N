@@ -3,24 +3,22 @@
 @theme inline {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-cormorant);
-  --font-playfair: var(--font-playfair);
-  --font-unifraktur: var(--font-unifraktur);
+  --font-jetbrains: var(--font-jetbrains);
   
-  --color-newspaper-bg: #f2efe9;
-  --color-newspaper-ink: #2a2a2a;
-  --color-newspaper-border: #4a4a4a;
+  --color-vintage-bg: #e9e4d8;
+  --color-vintage-ink: #342619;
 }
 
 :root {
-  --background: #f2efe9;
-  --foreground: #2a2a2a;
+  --background: #e9e4d8;
+  --foreground: #342619;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar for an elegant feel */
