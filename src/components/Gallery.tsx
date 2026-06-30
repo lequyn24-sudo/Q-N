@@ -26,9 +26,10 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: idx * 0.2, ease: "easeOut" }}
-              className={`relative w-full md:w-1/3 aspect-[3/4] p-2 grayscale-[30%] sepia-[15%] hover:grayscale-0 hover:sepia-0 transition-all duration-700 embossed-frame ${idx === 1 ? 'md:-translate-y-12' : ''}`}
+              className={`relative w-full md:w-1/3 aspect-[3/4] grayscale-[30%] sepia-[15%] hover:grayscale-0 hover:sepia-0 transition-all duration-700 floral-lace-wrapper ${idx === 1 ? 'md:-translate-y-12' : ''}`}
             >
-              <div className="w-full h-full relative overflow-hidden embossed-frame-inner">
+              <div className="w-full h-full relative overflow-hidden floral-lace-frame">
+                <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
                 <Image 
                   src={src} 
                   alt={`Gallery ${idx + 1}`} 

@@ -20,8 +20,9 @@ export default function WeddingDetails() {
             transition={{ duration: 0.8 }}
             className="w-full md:w-1/2"
           >
-            <div className="relative aspect-[4/5] p-2 grayscale-[20%] sepia-[10%] embossed-frame">
-              <div className="w-full h-full relative overflow-hidden embossed-frame-inner">
+            <div className="relative aspect-[4/5] grayscale-[20%] sepia-[10%] floral-lace-wrapper">
+              <div className="w-full h-full relative overflow-hidden floral-lace-frame">
+                <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
                 <Image 
                   src="/images/gallery-4.png" 
                   alt="Venue" 

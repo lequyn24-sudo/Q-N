@@ -29,9 +29,10 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
           style={{ y: y1 }}
-          className="relative w-[85%] md:w-[45%] h-[60vh] md:h-[75vh] z-10 embossed-frame"
+          className="relative w-[85%] md:w-[45%] h-[60vh] md:h-[75vh] z-10 floral-lace-wrapper"
         >
-          <div className="w-full h-full relative overflow-hidden grayscale-[50%] sepia-[10%] contrast-110 embossed-frame-inner">
+          <div className="floral-lace-frame w-full h-full relative overflow-hidden grayscale-[50%] sepia-[10%] contrast-110">
+            <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
             <Image 
               src="/images/hero.png" 
               alt="Quyn & Nhàn" 

@@ -17,13 +17,15 @@ export default function Story() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="w-full md:w-1/2 relative min-h-[500px]"
           >
-            <div className="absolute top-0 left-0 w-3/4 h-[400px] p-2 grayscale-[30%] sepia-[15%] embossed-frame">
-              <div className="w-full h-full relative overflow-hidden embossed-frame-inner">
+            <div className="absolute top-0 left-0 w-3/4 h-[400px] grayscale-[30%] sepia-[15%] floral-lace-wrapper">
+              <div className="w-full h-full relative overflow-hidden floral-lace-frame">
+                <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
                 <Image src="/images/gallery-1.png" alt="Story" fill className="object-cover" />
               </div>
             </div>
-            <div className="absolute bottom-0 right-0 w-2/3 h-[300px] p-2 grayscale-[40%] sepia-[20%] translate-y-12 embossed-frame">
-              <div className="w-full h-full relative overflow-hidden embossed-frame-inner">
+            <div className="absolute bottom-0 right-0 w-2/3 h-[300px] grayscale-[40%] sepia-[20%] translate-y-12 floral-lace-wrapper">
+              <div className="w-full h-full relative overflow-hidden floral-lace-frame">
+                <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
                 <Image src="/images/gallery-2.png" alt="Story" fill className="object-cover" />
               </div>
             </div>
