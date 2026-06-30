@@ -3,27 +3,24 @@
 @theme inline {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-cormorant);
+  --font-playfair: var(--font-playfair);
+  --font-unifraktur: var(--font-unifraktur);
   
-  --color-retro-brown: #3e3028;
-  --color-retro-cream: #f4efe6;
-  --color-retro-gold: #c4a661;
-  --color-retro-ink: #1a1a1a;
-  
-  --color-luxury-bg: var(--color-retro-cream);
-  --color-luxury-text: var(--color-retro-ink);
-  --color-luxury-accent: #c4b5a2;
+  --color-newspaper-bg: #f2efe9;
+  --color-newspaper-ink: #2a2a2a;
+  --color-newspaper-border: #4a4a4a;
 }
 
 :root {
-  --background: #faf9f6;
-  --foreground: #1a1a1a;
+  --background: #f2efe9;
+  --foreground: #2a2a2a;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Custom scrollbar for an elegant feel */
