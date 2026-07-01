@@ -33,7 +33,7 @@ export default function WeddingDetails() {
             <div>
               <div className="mb-8">
                 <div className="inline-block border border-vintage-ink/15 px-6 py-3 bg-vintage-ivory/30 backdrop-blur-sm">
-                  <p className="font-jetbrains text-vintage-soft-brown text-[10px] md:text-xs tracking-[0.3em] uppercase">
+                  <p className="font-jetbrains text-vintage-soft-brown text-sm md:text-base tracking-widest uppercase font-medium">
                     Thân Mời {guestName}
                   </p>
                 </div>
