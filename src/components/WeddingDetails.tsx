@@ -6,15 +6,17 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function WeddingDetails({ guestName: propGuestName }: { guestName?: string }) {
-  const [guestName, setGuestName] = useState(propGuestName || "Bạn");
+  const [urlName, setUrlName] = useState<string | null>(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const to = params.get('to');
     if (to) {
-      setGuestName(to);
+      setUrlName(to);
     }
   }, []);
+
+  const finalName = propGuestName || urlName || "Bạn";
 
   return (
     <section id="details-venue" className="py-24 md:py-40 px-6 bg-vintage-bg text-vintage-ink overflow-hidden relative">
@@ -34,7 +36,7 @@ export default function WeddingDetails({ guestName: propGuestName }: { guestName
               <div className="mb-8">
                 <div className="inline-block border border-vintage-ink/15 px-6 py-3 bg-vintage-ivory/30 backdrop-blur-sm">
                   <p className="font-jetbrains text-vintage-soft-brown text-sm md:text-base tracking-widest uppercase font-medium">
-                    Thân Mời {guestName}
+                    Thân Mời {finalName}
                   </p>
                 </div>
               </div>
