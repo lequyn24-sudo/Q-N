@@ -36,10 +36,10 @@ export default function Navigation() {
   }, [menuOpen]);
 
   const links = [
-    { name: "Story", href: "#story" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Details", href: "#details" },
-    { name: "RSVP", href: "#rsvp" },
+    { name: "Câu Chuyện", href: "#story" },
+    { name: "Thư Viện", href: "#gallery" },
+    { name: "Thông Tin", href: "#details" },
+    { name: "Hồi Đáp", href: "#rsvp" },
   ];
 
   return (

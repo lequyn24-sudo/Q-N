@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, JetBrains_Mono, Great_Vibes } from "next/font/google";
+import { Inter, Cormorant_Garamond, JetBrains_Mono, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -18,13 +18,13 @@ const cormorant = Cormorant_Garamond({
 const jetbrains = JetBrains_Mono({
   weight: ['300', '400', '500'],
   variable: "--font-jetbrains",
-  subsets: ["latin"],
+  subsets: ["latin"], // JetBrains Mono might not explicitly have 'vietnamese', latin is fine for numbers
 });
 
-const greatVibes = Great_Vibes({
-  weight: ['400'],
+const scriptFont = Dancing_Script({
+  weight: ['400', '500', '600', '700'],
   variable: "--font-script",
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
 });
 
 export const metadata: Metadata = {
@@ -40,9 +40,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable} ${greatVibes.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable} ${scriptFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-vintage-bg text-vintage-ink">
+      <body className="min-h-full flex flex-col bg-vintage-bg text-vintage-ink relative">
+        {/* Global Vintage Texture Overlay */}
+        <div 
+          className="pointer-events-none fixed inset-0 z-50 opacity-[0.04] mix-blend-multiply" 
+          style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}
+        />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

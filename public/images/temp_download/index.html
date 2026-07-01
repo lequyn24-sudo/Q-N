@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { background: #333; color: white; font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 20px; }
+  .img-container { text-align: center; }
+  img { max-width: 300px; max-height: 300px; border: 1px solid #666; background: #eee; }
+</style>
+</head>
+<body>
+<script>
+  const urls = [
+    "0_Rectangle_3.png", "1_Rectangle_3.png", "2_image_18.png", "3_image_18.png",
+    "4__.png", "5__.png", "6_photo.png", "7_photo.png", "8_photo.png", "9_photo.png",
+    "10_image_18.png", "11_image_18.png", "12__.png", "13__.png", "14___2.png", "15___2.png",
+    "16_photo.png", "17_photo.png", "18__2.png", "19__2.png", "20_photo.png", "21_photo.png",
+    "22___2.png", "23___2.png", "24__.png", "25__.png", "26__.png", "27__.png",
+    "28_image_19.png", "29_image_19.png", "30___.png", "31___.png", "32___2.png", "33___2.png",
+    "34__.png", "35__.png", "36__1.png", "37__1.png", "38_Mockup_card_tg-desig.png", "39_Mockup_card_tg-desig.png",
+    "40___.png", "41___.png", "42___.png", "43___.png", "44_image_18.png", "45_image_18.png",
+    "46__.png", "47__.png", "48___2.png", "49___2.png", "50_noroot.png", "51_noroot.png",
+    "52_photo.png", "53_photo.png", "54_image_18.png", "55_image_18.png", "56__.png", "57__.png",
+    "58_image_19.png", "59_image_19.png", "60__.png", "61__.png", "62__.png", "63__.png",
+    "64_Frame_5.png", "65_Frame_5.png", "66_5.png", "67_5.png", "68_image_18.png", "69_image_18.png",
+    "70__.png", "71__.png"
+  ];
+  urls.forEach(f => {
+    document.write(`<div class="img-container"><div>${f}</div><img src="${f}" /></div>`);
+  });
+</script>
+</body>
+</html>

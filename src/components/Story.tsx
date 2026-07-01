@@ -6,56 +6,63 @@ import Image from "next/image";
 export default function Story() {
   return (
     <section id="story" className="py-24 md:py-40 px-6 bg-vintage-bg overflow-hidden relative">
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="flex flex-col md:flex-row gap-16 md:gap-32 items-center">
+      <div className="container mx-auto max-w-[90rem] relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-x-12 items-center">
           
-          {/* Overlapping Images (Vintage Fine Art style) */}
+          {/* Typography / Editorial Title */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="w-full md:w-1/2 relative min-h-[500px]"
+            className="md:col-span-12 lg:col-span-5 lg:col-start-2 z-20"
           >
-            <div className="absolute top-0 left-0 w-3/4 h-[400px] grayscale-[30%] sepia-[15%] floral-lace-wrapper">
-              <div className="w-full h-full relative overflow-hidden floral-lace-frame">
-                <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
-                <Image src="/images/gallery-1.png" alt="Story" fill className="object-cover" />
-              </div>
-            </div>
-            <div className="absolute bottom-0 right-0 w-2/3 h-[300px] grayscale-[40%] sepia-[20%] translate-y-12 floral-lace-wrapper">
-              <div className="w-full h-full relative overflow-hidden floral-lace-frame">
-                <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
-                <Image src="/images/gallery-2.png" alt="Story" fill className="object-cover" />
-              </div>
+            <p className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-dusty-green mb-6 md:mb-10">
+              Chương I — Khởi Đầu
+            </p>
+            <h2 className="font-serif text-[4rem] md:text-[7rem] lg:text-[7.5rem] text-vintage-ink leading-[0.85] tracking-tight">
+              The Design <br/>
+              <span className="italic text-vintage-sepia ml-12 md:ml-24">Of Us</span>
+            </h2>
+            <div className="mt-12 md:mt-20 space-y-8 font-serif text-lg md:text-2xl font-light leading-relaxed text-vintage-soft-brown max-w-xl">
+              <p className="font-serif text-lg md:text-xl text-vintage-soft-brown leading-relaxed max-w-xl text-justify">
+              <span className="font-serif text-5xl float-left mr-2 mt-1 text-vintage-burgundy">G</span>
+              iống như một tác phẩm nghệ thuật được chế tác tuyệt đẹp, câu chuyện của chúng mình không phải do tình cờ mà có—nó được thiết kế tỉ mỉ bởi thời gian, sự kiên nhẫn và những ước mơ chung. Mỗi nét vẽ trên chặng đường chúng mình đi cùng nhau đều tô điểm thêm chiều sâu và sự ấm áp cho cuộc sống của cả hai.
+            </p>
+              <p>
+                Từ những phác thảo lặng lẽ của những ngày đầu cho đến kiệt tác rực rỡ mà chúng mình đang cùng nhau xây dựng hôm nay, mỗi khoảnh khắc đều là sự lựa chọn đầy ý thức để luôn chọn lấy nhau. Đây chính là tạo tác tuyệt vời nhất của chúng mình.
+              </p>
             </div>
           </motion.div>
           
-          {/* Typography */}
+          {/* Asymmetrical Images */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-            className="w-full md:w-1/2 space-y-8"
+            transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+            className="md:col-span-12 lg:col-span-5 lg:col-start-7 relative min-h-[60vh] md:min-h-[80vh] w-full"
           >
-            <div>
-              <p className="font-jetbrains text-xs tracking-[0.2em] uppercase text-vintage-ink/50 mb-4">Chapter I</p>
-              <h2 className="font-serif text-5xl md:text-7xl text-vintage-ink leading-tight">
-                How We <br/>
-                <span className="italic opacity-80">Met</span>
-              </h2>
+            {/* Primary Large Image */}
+            <div className="absolute top-0 right-0 w-[85%] h-[70%] z-10 p-2 bg-vintage-ivory shadow-xl rotate-[2deg]">
+              <div className="w-full h-full relative overflow-hidden">
+                <Image src="/images/gallery-1.png" alt="Our Story" fill className="object-cover grayscale-[40%] sepia-[25%] contrast-110" />
+              </div>
             </div>
             
-            <div className="space-y-6 font-serif text-lg md:text-xl font-light leading-relaxed text-vintage-ink/80 text-justify">
-              <p>
-                It began with a chance encounter in a crowded café on a rainy Tuesday. What started as a shared table quickly became a shared life. Over the past five years, we have built a life filled with laughter, adventure, and an enduring love.
-              </p>
-              <p>
-                From our first trip to the Amalfi Coast to the quiet Sunday mornings in our apartment, every moment has been a testament to our bond. We are thrilled to invite you to celebrate the next chapter of our story.
-              </p>
+            {/* Secondary Overlapping Image */}
+            <div className="absolute bottom-0 left-0 w-[60%] h-[50%] z-20 p-2 bg-vintage-warm-white shadow-lg -rotate-[3deg]">
+              <div className="w-full h-full relative overflow-hidden">
+                <Image src="/images/gallery-2.png" alt="Our Story Details" fill className="object-cover grayscale-[60%] sepia-[15%] contrast-105" />
+              </div>
+            </div>
+            
+            {/* Decorative Element */}
+            <div className="absolute top-[60%] -left-12 z-0 font-script text-6xl md:text-8xl text-vintage-champagne opacity-60 -rotate-12">
+              Tình yêu bất diệt
             </div>
           </motion.div>
+          
         </div>
       </div>
     </section>

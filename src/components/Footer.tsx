@@ -18,16 +18,16 @@ export default function Footer() {
           </div>
 
           <h2 className="font-serif text-4xl md:text-6xl mb-8 tracking-widest uppercase">
-            Thank You
+            Chân Thành Cảm Ơn
           </h2>
           <p className="font-serif text-lg md:text-xl italic text-vintage-ink/70 mb-16">
-            For being part of our story.
+            Vì đã là một phần trong câu chuyện của chúng mình.
           </p>
 
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 font-jetbrains text-xs tracking-[0.2em] uppercase text-vintage-ink/50 border-t border-vintage-ink/10 pt-12">
             <span>© 2026 Quyn & Nhàn</span>
-            <span>A Vintage Dream</span>
-            <span>Malibu, CA</span>
+            <span>Giấc Mơ Hoài Cổ</span>
+            <span>Đà Lạt, VN</span>
           </div>
         </motion.div>
       </div>

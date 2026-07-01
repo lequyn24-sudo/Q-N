@@ -1,54 +1,113 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Paperclip } from "lucide-react";
 
 export default function Timeline() {
-  const events = [
-    { time: "3:00 PM", title: "Welcome Drinks", desc: "Guests arrive and mingle with light refreshments.", period: "Afternoon" },
-    { time: "4:00 PM", title: "Ceremony", desc: "The exchange of vows and rings.", period: "Late Afternoon" },
-    { time: "5:30 PM", title: "Cocktail Hour", desc: "Signature drinks and hors d'oeuvres.", period: "Evening" },
-    { time: "7:00 PM", title: "Reception", desc: "Dinner, toasts, and dancing into the night.", period: "Night" },
-  ];
-
   return (
-    <section id="details" className="relative py-24 md:py-40 px-6 bg-vintage-bg text-vintage-ink overflow-hidden">
+    <section id="details" className="relative py-24 md:py-40 px-6 bg-vintage-bg text-vintage-ink overflow-hidden min-h-screen flex items-center justify-center">
       
-      <div className="container mx-auto max-w-4xl relative z-10">
-        <div className="text-center mb-16 md:mb-24">
-          <p className="font-jetbrains text-xs tracking-[0.2em] uppercase text-vintage-ink/50 mb-4">Chapter III</p>
-          <h2 className="font-serif text-5xl md:text-7xl">The Itinerary</h2>
+
+
+      <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
+        
+        {/* Editorial Heading */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-center mb-16 md:mb-24"
+        >
+          <h2 className="font-script text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none text-vintage-ink capitalize">
+            Ngày Trọng Đại Của Chúng Mình
+          </h2>
+        </motion.div>
+
+        {/* Main Content Area */}
+        <div className="relative w-full flex flex-col md:flex-row items-center justify-center gap-12 md:gap-8">
+          
+          {/* Left Text */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            className="md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-left z-20 order-2 md:order-1"
+          >
+            <p className="font-sans text-vintage-dusty-green text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
+              Ngày Chúng Mình
+            </p>
+          </motion.div>
+
+          {/* Right Text */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+            className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-right z-20 order-3 md:order-3"
+          >
+            <p className="font-sans text-vintage-dusty-green text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
+              Chính Thức <br className="hidden md:block" />Về Chung Nhà
+            </p>
+          </motion.div>
+
+          {/* Center Vintage Calendar Card */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
+            whileInView={{ opacity: 1, scale: 1, rotate: 2 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
+            className="relative bg-vintage-ivory w-72 md:w-80 lg:w-96 aspect-square shadow-2xl flex flex-col items-center justify-center text-vintage-ink p-8 order-1 md:order-2 z-10 border border-vintage-ink/5"
+            style={{ boxShadow: '8px 12px 25px rgba(52, 38, 25, 0.15), -4px -4px 10px rgba(253, 251, 247, 0.5)' }}
+          >
+            {/* Paperclip */}
+            <div className="absolute -top-6 left-6 text-vintage-ink/40 opacity-80 rotate-12 drop-shadow-sm">
+              <svg width="24" height="64" viewBox="0 0 24 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C9.23858 2 7 4.23858 7 7V45C7 49.4183 10.5817 53 15 53C19.4183 53 23 49.4183 23 45V14" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+                <path d="M12 62C7.58172 62 4 58.4183 4 54V16C4 11.5817 7.58172 8 12 8C16.4183 8 20 11.5817 20 16V47" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+              </svg>
+            </div>
+            
+            {/* Card inner subtle border/texture */}
+            <div className="absolute inset-3 border border-vintage-ink/10 pointer-events-none" />
+
+            <div className="text-center w-full mt-4">
+              <p className="font-serif text-3xl md:text-4xl tracking-widest mb-2 text-vintage-ink/80">2026</p>
+              <p className="font-serif text-2xl md:text-3xl tracking-[0.3em] uppercase border-b border-vintage-ink/20 pb-4 inline-block px-4 text-vintage-ink">
+                Tháng 6
+              </p>
+            </div>
+
+            <div className="relative mt-6 flex-grow flex items-center justify-center w-full">
+              {/* Hand-drawn circle */}
+              <svg className="absolute w-full h-full max-w-[200px] max-h-[200px] text-vintage-sepia opacity-60 -rotate-[15deg]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 5C75 10 95 30 95 50C95 75 75 95 45 95C20 95 5 70 8 45C10 20 30 5 50 5Z" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+              
+              <span className="font-script text-[6rem] md:text-[8rem] text-vintage-burgundy italic leading-none z-10 -ml-2">
+                15
+              </span>
+            </div>
+            
+          </motion.div>
+
         </div>
 
-        <div className="relative">
-          {/* Central Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-vintage-ink/20 -translate-x-1/2" />
+        {/* Lunar Date Info below */}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+          className="mt-20 text-center"
+        >
+          <p className="font-sans text-vintage-soft-brown text-[10px] md:text-xs tracking-[0.3em] uppercase">
+            Tức Ngày 1 Tháng 5 Năm Bính Ngọ
+          </p>
+        </motion.div>
 
-          <div className="space-y-16 md:space-y-24">
-            {events.map((event, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8 }}
-                className={`relative flex flex-col md:flex-row items-start md:items-center ${
-                  i % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-vintage-ink rounded-full -translate-x-[5px] md:-translate-x-1.5 mt-2 md:mt-0" />
-
-                {/* Content */}
-                <div className={`ml-12 md:ml-0 w-full md:w-[45%] ${i % 2 === 0 ? "md:text-left md:pl-12" : "md:text-right md:pr-12"}`}>
-                  <p className="font-jetbrains text-xs uppercase tracking-widest text-vintage-ink/60 mb-2">{event.period}</p>
-                  <p className="font-serif text-3xl mb-1">{event.time}</p>
-                  <h3 className="font-serif italic text-2xl mb-3 text-vintage-ink/90">{event.title}</h3>
-                  <p className="font-serif font-light text-vintage-ink/70 leading-relaxed text-lg">{event.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

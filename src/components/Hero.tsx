@@ -23,21 +23,34 @@ export default function Hero() {
 
       <motion.div style={{ opacity }} className="relative w-full max-w-7xl mx-auto h-[90vh] flex items-center justify-center">
         
-        {/* Main Central Image */}
+        {/* Main Central Container */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
           style={{ y: y1 }}
-          className="relative w-[80%] md:w-[45%] lg:w-[40%] aspect-[3/4] md:aspect-[4/5] z-10 floral-lace-wrapper max-h-[80vh]"
+          className="relative h-[70vh] md:h-[80vh] max-h-[800px] aspect-[9/16] z-10 flex items-center justify-center max-w-[90vw]"
         >
-          <div className="floral-lace-frame w-full h-full relative overflow-hidden grayscale-[50%] sepia-[10%] contrast-110">
-            <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
-            <Image 
-              src="/images/hero.png" 
-              alt="Quyn & Nhàn" 
-              fill 
-              className="object-cover object-top"
+          {/* The Actual Photo */}
+          <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-full [clip-path:ellipse(39%_30.5%_at_50%_51.5%)]">
+              <Image 
+                src="/images/hero-lineart-916.png" 
+                alt="Quyn & Nhàn" 
+                fill 
+                className="object-cover scale-[1.15] translate-y-[4%] object-center grayscale-[50%] sepia-[15%] contrast-110"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Embossed Lace Frame Image blended over the photo */}
+          <div className="absolute inset-0 z-20 pointer-events-none mix-blend-multiply">
+            <Image
+              src="/images/lace-frame-v2.png"
+              alt="Lace Frame"
+              fill
+              className="object-cover"
               priority
             />
           </div>
@@ -49,13 +62,13 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[8%] md:top-[25%] left-[8%] md:left-[5%] lg:left-[8%] z-20"
+          className="absolute top-[2%] md:top-[15%] left-[5%] md:left-[5%] lg:left-[8%] z-30"
         >
-          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-vintage-ink drop-shadow-sm whitespace-nowrap">
+          <h1 className="font-serif text-[4.5rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             Quyn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:ml-2 text-vintage-ink/60">
-            The groom
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:ml-2 text-[#5C4D3C]/70">
+            Chú rể
           </p>
         </motion.div>
 
@@ -65,13 +78,13 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[10%] md:bottom-[25%] right-[8%] md:right-[5%] lg:right-[8%] z-20 text-right"
+          className="absolute bottom-[2%] md:bottom-[15%] right-[5%] md:right-[5%] lg:right-[8%] z-30 text-right"
         >
-          <h1 className="font-serif text-[4rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-vintage-ink drop-shadow-sm whitespace-nowrap">
+          <h1 className="font-serif text-[4.5rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             &amp; Nhàn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:mr-2 text-vintage-ink/60">
-            The bride
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:mr-2 text-[#5C4D3C]/70">
+            Cô dâu
           </p>
         </motion.div>
 
@@ -82,7 +95,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 3 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center font-jetbrains text-[10px] md:text-xs uppercase tracking-[0.3em] text-vintage-ink/80"
         >
-          A Vintage Dream <br/> 06 . 15 . 2026
+          Giấc Mơ Hoài Cổ <br/> 06 . 15 . 2026
         </motion.div>
 
       </motion.div>

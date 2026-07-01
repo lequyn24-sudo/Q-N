@@ -5,71 +5,78 @@ import Image from "next/image";
 
 export default function WeddingDetails() {
   return (
-    <section className="py-24 md:py-40 px-6 bg-vintage-bg text-vintage-ink overflow-hidden">
-      <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-16 md:mb-24">
-          <p className="font-jetbrains text-xs tracking-[0.2em] uppercase text-vintage-ink/50 mb-4">Location</p>
-          <h2 className="font-serif text-5xl md:text-7xl">The Details</h2>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+    <section id="details-venue" className="py-24 md:py-40 px-6 bg-vintage-bg text-vintage-ink overflow-hidden relative">
+      <div className="container mx-auto max-w-[90rem] relative z-10">
+        
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-x-12 items-center">
+          
+          {/* Typography */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="w-full md:w-1/2"
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="md:col-span-12 lg:col-span-6 lg:col-start-2 z-20 space-y-16"
           >
-            <div className="relative aspect-[4/5] grayscale-[20%] sepia-[10%] floral-lace-wrapper">
-              <div className="w-full h-full relative overflow-hidden floral-lace-frame">
-                <div className="absolute inset-0 z-10 floral-lace-inner pointer-events-none" />
+            <div>
+              <p className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-6">Chương IV — Địa Điểm</p>
+              <h2 className="font-serif text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none tracking-tight text-vintage-ink">
+                Chung Vui <br/>
+                <span className="italic text-vintage-burgundy ml-12 md:ml-24">Cùng Chúng Mình</span>
+              </h2>
+            </div>
+
+            <div className="space-y-12 max-w-lg mr-auto md:ml-12 lg:ml-0">
+              <div className="border-l-2 border-vintage-sepia/30 pl-8">
+                <h3 className="font-serif text-3xl mb-4 text-vintage-ink italic">Địa Điểm</h3>
+                <p className="font-serif text-xl text-vintage-soft-brown leading-relaxed mb-6">
+                  Hôn lễ và tiệc mừng của chúng mình sẽ được tổ chức tại một khu vườn thơ mộng. Với không gian xanh mát và lãng mạn, đây là nơi hoàn hảo để chúng mình bắt đầu chương mới của cuộc đời.
+                </p>
+                <address className="not-italic font-sans text-xs uppercase tracking-widest text-vintage-ink/70 leading-loose">
+                  Khu Vườn Cổ Tích<br/>
+                  123 Đường Hoa Hồng<br/>
+                  Đà Lạt, Lâm Đồng
+                </address>
+              </div>
+              
+              <div className="border-l-2 border-vintage-dusty-green/30 pl-8">
+                <h3 className="font-serif text-3xl mb-4 text-vintage-ink italic">Quà Tặng</h3>
+                <p className="font-serif text-xl text-vintage-soft-brown leading-relaxed">
+                  Sự hiện diện của bạn đã là món quà tuyệt vời nhất dành cho chúng mình. Tuy nhiên, nếu bạn muốn gửi tặng một món quà nhỏ, sẽ có một khu vực nhận quà tại sảnh tiệc.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Image & Dress Code */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+            className="md:col-span-12 lg:col-span-4 lg:col-start-8 relative mt-12 lg:mt-0"
+          >
+            <div className="relative aspect-[4/5] bg-vintage-cream p-4 shadow-2xl rotate-2 z-10 w-full md:w-3/4 mx-auto lg:w-full">
+              <div className="w-full h-full relative overflow-hidden">
                 <Image 
                   src="/images/gallery-4.png" 
                   alt="Venue" 
                   fill 
-                  className="object-cover"
+                  className="object-cover grayscale-[40%] sepia-[20%] contrast-110"
                 />
               </div>
             </div>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full md:w-1/2 space-y-12"
-          >
-            <div>
-              <h3 className="font-serif text-3xl mb-4 italic">The Venue</h3>
-              <p className="font-serif text-lg text-vintage-ink/80 leading-relaxed mb-4">
-                The ceremony and reception will be held at the beautiful Malibu estate. 
-                With sweeping ocean views and lush gardens, it is the perfect setting 
-                to begin our lives together.
-              </p>
-              <address className="not-italic font-jetbrains text-sm uppercase tracking-widest text-vintage-ink/60 leading-loose">
-                123 Ocean View Drive<br/>
-                Malibu, California<br/>
-                90265
-              </address>
-            </div>
             
-            <div className="text-center py-8">
-              <h3 className="font-script text-6xl md:text-8xl mb-6 text-emboss relative z-10 -ml-4">
-                Dress-code
+            <div className="absolute -bottom-16 -left-12 md:-left-24 lg:-left-32 z-20 bg-vintage-ivory p-8 md:p-12 shadow-xl -rotate-3 max-w-sm border border-vintage-ink/5">
+              <h3 className="font-script text-5xl md:text-7xl mb-4 text-vintage-champagne text-center -mt-6">
+                Trang Phục
               </h3>
-              <p className="font-jetbrains text-xs tracking-widest text-vintage-ink/80 leading-relaxed max-w-sm mx-auto uppercase">
-                Minimalism and elegance - this is the perfect formula for our guests! We will be glad to see you
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-3xl mb-4 italic">Gifts</h3>
-              <p className="font-serif text-lg text-vintage-ink/80 leading-relaxed">
-                Your presence is the greatest gift. However, if you wish to honor us with a gift, a wishing well will be available at the reception.
+              <p className="font-sans text-[10px] md:text-xs tracking-widest text-vintage-ink/80 leading-relaxed text-center uppercase">
+                Tối giản và thanh lịch — công thức hoàn hảo dành cho khách mời. Vui lòng chọn trang phục trang trọng, mang âm hưởng Vintage.
               </p>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
