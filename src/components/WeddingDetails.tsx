@@ -29,7 +29,7 @@ export default function WeddingDetails() {
             <div className="space-y-12 max-w-lg mr-auto md:ml-12 lg:ml-0">
               <div className="border-l-2 border-vintage-sepia/30 pl-8">
                 <h3 className="font-serif text-3xl mb-4 text-vintage-ink italic">Địa Điểm</h3>
-                <p className="font-serif text-xl text-vintage-soft-brown leading-relaxed mb-6">
+                <p className="font-jetbrains text-xs md:text-sm text-vintage-soft-brown leading-loose text-justify mb-6">
                   Hôn lễ và tiệc mừng của chúng mình sẽ được tổ chức tại một khu vườn thơ mộng. Với không gian xanh mát và lãng mạn, đây là nơi hoàn hảo để chúng mình bắt đầu chương mới của cuộc đời.
                 </p>
                 <address className="not-italic font-jetbrains text-xs uppercase tracking-widest text-vintage-ink/70 leading-loose">
@@ -41,7 +41,7 @@ export default function WeddingDetails() {
               
               <div className="border-l-2 border-vintage-dusty-green/30 pl-8">
                 <h3 className="font-serif text-3xl mb-4 text-vintage-ink italic">Quà Tặng</h3>
-                <p className="font-serif text-xl text-vintage-soft-brown leading-relaxed">
+                <p className="font-jetbrains text-xs md:text-sm text-vintage-soft-brown leading-loose text-justify">
                   Sự hiện diện của bạn đã là món quà tuyệt vời nhất dành cho chúng mình. Tuy nhiên, nếu bạn muốn gửi tặng một món quà nhỏ, sẽ có một khu vực nhận quà tại sảnh tiệc.
                 </p>
               </div>
