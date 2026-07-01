@@ -62,7 +62,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[15%] md:top-[8%] lg:top-[10%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
+          className="absolute top-[15%] md:top-[15%] lg:top-[18%] xl:top-[20%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
         >
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text py-[0.4em] -my-[0.4em]">
             Quyn
@@ -78,7 +78,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[16%] md:bottom-[8%] lg:bottom-[10%] right-[5%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
+          className="absolute bottom-[16%] md:bottom-[12%] lg:bottom-[15%] xl:bottom-[18%] right-[5%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
         >
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text py-[0.4em] -my-[0.4em]">
             &amp; Nhàn
