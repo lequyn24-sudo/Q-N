@@ -73,8 +73,8 @@ export default function VideoSection() {
             The Way We Create
           </p>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-vintage-ink leading-tight tracking-tight italic">
-            Cùng Nhau Băng Qua <br/> 
-            <span className="font-script text-5xl md:text-7xl text-vintage-burgundy ml-8 not-italic">Mọi Nẻo Đường</span>
+            The Decisions <br/> 
+            <span className="font-script text-5xl md:text-7xl text-vintage-burgundy ml-8 not-italic">We Believe In</span>
           </h2>
         </motion.div>
 
