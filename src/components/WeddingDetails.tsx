@@ -3,7 +3,19 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { useState, useEffect } from "react";
+
 export default function WeddingDetails() {
+  const [guestName, setGuestName] = useState("Bạn");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const to = params.get('to');
+    if (to) {
+      setGuestName(to);
+    }
+  }, []);
+
   return (
     <section id="details-venue" className="py-24 md:py-40 px-6 bg-vintage-bg text-vintage-ink overflow-hidden relative">
       <div className="container mx-auto max-w-[90rem] relative z-10">
@@ -19,7 +31,13 @@ export default function WeddingDetails() {
             className="md:col-span-12 lg:col-span-6 lg:col-start-2 z-20 space-y-16"
           >
             <div>
-
+              <div className="mb-8">
+                <div className="inline-block border border-vintage-ink/15 px-6 py-3 bg-vintage-ivory/30 backdrop-blur-sm">
+                  <p className="font-jetbrains text-vintage-soft-brown text-[10px] md:text-xs tracking-[0.3em] uppercase">
+                    Thân Mời {guestName}
+                  </p>
+                </div>
+              </div>
               <h2 className="font-serif text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none tracking-tight text-vintage-ink">
                 Chung Vui <br/>
                 <span className="italic text-vintage-burgundy ml-12 md:ml-24">Cùng Chúng Mình</span>
