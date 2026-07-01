@@ -24,11 +24,11 @@ export default function Story() {
               The Design <br/>
               <span className="italic text-vintage-sepia ml-12 md:ml-24">Of Us</span>
             </h2>
-            <div className="mt-12 md:mt-20 space-y-8 font-serif text-lg md:text-2xl font-light leading-relaxed text-vintage-soft-brown max-w-xl">
-              <p className="font-serif text-lg md:text-xl text-vintage-soft-brown leading-relaxed max-w-xl text-justify">
-              <span className="font-serif text-5xl float-left mr-2 mt-1 text-vintage-burgundy">G</span>
-              iống như một tác phẩm nghệ thuật được chế tác tuyệt đẹp, câu chuyện của chúng mình không phải do tình cờ mà có—nó được thiết kế tỉ mỉ bởi thời gian, sự kiên nhẫn và những ước mơ chung. Mỗi nét vẽ trên chặng đường chúng mình đi cùng nhau đều tô điểm thêm chiều sâu và sự ấm áp cho cuộc sống của cả hai.
-            </p>
+            <div className="mt-12 md:mt-20 space-y-8 font-jetbrains text-xs md:text-sm leading-loose text-vintage-soft-brown max-w-xl text-justify">
+              <p>
+              <span className="font-serif text-5xl float-left mr-3 mt-1 text-vintage-burgundy leading-none">G</span>
+                iống như một tác phẩm nghệ thuật được chế tác tuyệt đẹp, câu chuyện của chúng mình không phải do tình cờ mà có—nó được thiết kế tỉ mỉ bởi thời gian, sự kiên nhẫn và những ước mơ chung. Mỗi nét vẽ trên chặng đường chúng mình đi cùng nhau đều tô điểm thêm chiều sâu và sự ấm áp cho cuộc sống của cả hai.
+              </p>
               <p>
                 Từ những phác thảo lặng lẽ của những ngày đầu cho đến kiệt tác rực rỡ mà chúng mình đang cùng nhau xây dựng hôm nay, mỗi khoảnh khắc đều là sự lựa chọn đầy ý thức để luôn chọn lấy nhau. Đây chính là tạo tác tuyệt vời nhất của chúng mình.
               </p>
