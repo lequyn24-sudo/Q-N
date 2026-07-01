@@ -41,13 +41,6 @@ export default function Hero() {
                 className="object-cover scale-[1.15] translate-y-[4%] object-center grayscale-[50%] sepia-[15%] contrast-110"
                 priority
               />
-
-              {/* Chữ & đặt lên TRÊN ảnh vì ảnh không trong suốt. Hạ opacity để không che mặt */}
-              <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none opacity-[0.15]">
-                <span className="font-bonthing text-[20rem] md:text-[30rem] leading-none text-vintage-ink translate-x-10 -translate-y-8 drop-shadow-sm">
-                  &amp;
-                </span>
-              </div>
             </div>
           </div>
 
@@ -63,30 +56,46 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Floating Typography - Top Center */}
+        {/* Floating Typography - Top Left */}
         <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[14%] md:top-[16%] left-1/2 -translate-x-1/2 z-30 w-full text-center px-4"
+          className="absolute top-[12%] md:top-[15%] left-[5%] md:left-[5%] lg:left-[8%] z-30"
         >
-          <h1 className="font-script text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-vintage-ink tracking-wide">
-            Quyn Lê
+          <h1 className="font-bonthing text-7xl sm:text-8xl md:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
+            Quyn
           </h1>
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:ml-2 text-[#5C4D3C]/70">
+            Chú rể
+          </p>
         </motion.div>
 
-        {/* Floating Typography - Bottom Center */}
+        {/* Floating Typography - Bottom Right */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[16%] md:bottom-[14%] left-1/2 -translate-x-1/2 z-30 w-full text-center px-4"
+          className="absolute bottom-[14%] md:bottom-[15%] right-[5%] md:right-[5%] lg:right-[8%] z-30 text-right"
         >
-          <h1 className="font-script text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-vintage-ink tracking-wide">
-            Nhàn Bùi
+          <h1 className="font-bonthing text-7xl sm:text-8xl md:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
+            &amp; Nhàn
           </h1>
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:mr-2 text-[#5C4D3C]/70">
+            Cô dâu
+          </p>
+        </motion.div>
+
+        {/* Central Small Text */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 3 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center font-jetbrains text-[10px] md:text-xs uppercase tracking-[0.3em] text-vintage-ink/80"
+        >
+          Giấc Mơ Hoài Cổ <br/> 06 . 15 . 2026
         </motion.div>
 
       </motion.div>
