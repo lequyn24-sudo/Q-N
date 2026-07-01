@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import Hero from "@/components/Hero";
 import Story from "@/components/Story";
@@ -15,34 +11,15 @@ import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import OpeningAnimation from "@/components/OpeningAnimation";
 import BackgroundMusic from "@/components/BackgroundMusic";
-import { Loader2 } from "lucide-react";
 
-export default function InvitePage() {
-  const params = useParams();
-  const code = params.code as string;
-  const [guestData, setGuestData] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+export default async function InvitePage({ params }: { params: { code: string } }) {
+  const code = params.code;
 
-  useEffect(() => {
-    async function loadGuest() {
-      if (!code) return;
-      
-      const { data, error } = await supabase.rpc("get_guest_by_code", { p_invite_code: code });
-      
-      if (error || !data || data.length === 0) {
-        console.error("Error loading guest:", error);
-        setError(true);
-      } else {
-        setGuestData(data[0]);
-      }
-      setLoading(false);
-    }
-    
-    loadGuest();
-  }, [code]);
+  // Lấy dữ liệu khách mời trực tiếp trên Server (SSR)
+  // Đảm bảo HTML trả về nguyên vẹn 100% giống trang chủ, giúp video tự động chạy (autoplay) trên iOS/Safari
+  const { data, error } = await supabase.rpc("get_guest_by_code", { p_invite_code: code });
 
-  if (error) {
+  if (error || !data || data.length === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-vintage-bg text-center px-6">
         <h1 className="font-serif text-4xl text-vintage-burgundy mb-4">Xin lỗi!</h1>
@@ -53,6 +30,8 @@ export default function InvitePage() {
     );
   }
 
+  const guestData = data[0];
+
   return (
     <main>
       <OpeningAnimation />
@@ -60,22 +39,13 @@ export default function InvitePage() {
       <BackgroundMusic />
       
       <Hero />
-      
       <Story />
       <VideoSection />
       <Gallery />
       <Timeline />
       
-      {!loading ? (
-        <>
-          <WeddingDetails guestName={guestData?.name} />
-          <RSVP guestData={guestData} />
-        </>
-      ) : (
-        <div className="py-40 flex items-center justify-center bg-vintage-bg">
-          <Loader2 className="w-8 h-8 animate-spin text-vintage-ink/50" />
-        </div>
-      )}
+      <WeddingDetails guestName={guestData.name} />
+      <RSVP guestData={guestData} />
       
       <Guestbook />
       <Footer />
