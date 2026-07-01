@@ -75,11 +75,10 @@ export default function RSVP({ guestData }: { guestData?: any }) {
               </div>
 
               <div className="mt-10">
-                <label className="block text-vintage-dusty-green uppercase tracking-[0.2em] text-[10px] font-jetbrains mb-4 text-center">Số lượng người tham dự (Tối đa {guestData?.guest_count || 1})</label>
+                <label className="block text-vintage-dusty-green uppercase tracking-[0.2em] text-[10px] font-jetbrains mb-4 text-center">Số lượng người tham dự</label>
                 <input 
                   type="number" 
                   min="1"
-                  max={guestData?.guest_count || 1}
                   value={attendingCount}
                   onChange={(e) => setAttendingCount(parseInt(e.target.value))}
                   className="w-full bg-transparent border-b border-vintage-ink/20 py-2 text-center text-2xl font-serif text-vintage-ink focus:outline-none focus:border-vintage-sepia transition-colors placeholder:text-vintage-ink/20"

@@ -58,7 +58,7 @@ export default function Navigation() {
       >
         <div className="container mx-auto px-6 flex justify-between items-center max-w-7xl">
           <a href="#" onClick={() => setMenuOpen(false)} className="font-serif text-xl md:text-2xl tracking-widest uppercase relative z-50 text-inherit">
-            Quyn <span className="text-vintage-accent mx-1">&amp;</span> Nhàn
+            Quyn <span className="text-vintage-sepia mx-1">&amp;</span> Nhàn
           </a>
           
           <ul className="hidden md:flex gap-10">
@@ -66,7 +66,7 @@ export default function Navigation() {
               <li key={link.name}>
                 <a 
                   href={link.href}
-                  className="text-sm tracking-widest uppercase hover:text-vintage-accent transition-colors duration-300"
+                  className="text-sm tracking-widest uppercase hover:text-vintage-sepia transition-colors duration-300"
                 >
                   {link.name}
                 </a>
@@ -91,7 +91,7 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-20%" }}
             transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
-            className="fixed inset-0 z-40 bg-retro-brown flex flex-col items-center justify-center pt-20"
+            className="fixed inset-0 z-40 bg-vintage-bg/95 backdrop-blur-lg flex flex-col items-center justify-center pt-20"
           >
             <ul className="flex flex-col items-center gap-12">
               {links.map((link, i) => (
@@ -104,7 +104,7 @@ export default function Navigation() {
                   <a 
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="font-serif text-4xl tracking-widest uppercase text-retro-cream hover:text-retro-gold transition-colors"
+                    className="font-serif text-4xl tracking-widest uppercase text-vintage-ink hover:text-vintage-sepia transition-colors"
                   >
                     {link.name}
                   </a>
