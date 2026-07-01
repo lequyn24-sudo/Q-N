@@ -24,7 +24,7 @@ export default function Timeline() {
         </motion.div>
 
         {/* Main Content Area */}
-        <div className="relative w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+        <div className="relative w-full flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8">
           
           {/* Left Text */}
           <motion.div 
@@ -32,7 +32,7 @@ export default function Timeline() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-left z-20 order-2 md:order-1"
+            className="md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-left z-20 order-3 md:order-1"
           >
             <p className="font-jetbrains text-vintage-ivory/70 text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
               Ngày Chúng Mình
@@ -45,10 +45,23 @@ export default function Timeline() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-right z-20 order-3 md:order-3"
+            className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-right z-20 order-4 md:order-3"
           >
             <p className="font-jetbrains text-vintage-ivory/70 text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
               Chính Thức <br className="hidden md:block" />Về Chung Nhà
+            </p>
+          </motion.div>
+
+          {/* Lunar Date (Mobile Only) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+            className="md:hidden text-center order-2 mt-4 mb-2"
+          >
+            <p className="font-jetbrains font-bold text-vintage-ivory/70 text-[10px] tracking-[0.3em] uppercase">
+              Tức Ngày 26 Tháng 8 Năm Bính Ngọ
             </p>
           </motion.div>
 
@@ -94,13 +107,13 @@ export default function Timeline() {
 
         </div>
 
-        {/* Lunar Date Info below */}
+        {/* Lunar Date Info below (Desktop Only) */}
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-          className="mt-12 md:mt-20 text-center"
+          className="hidden md:block mt-20 text-center"
         >
           <p className="font-jetbrains font-bold text-vintage-ivory/70 text-[10px] md:text-xs tracking-[0.3em] uppercase">
             Tức Ngày 26 Tháng 8 Năm Bính Ngọ
