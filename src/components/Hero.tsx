@@ -62,12 +62,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[8%] md:top-[8%] lg:top-[10%] left-[2%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
+          className="absolute top-[15%] md:top-[8%] lg:top-[10%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
         >
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             Quyn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:mt-8 lg:mt-12 xl:mt-16 md:ml-4 text-[#5C4D3C]/70">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-0 md:mt-8 lg:mt-12 xl:mt-16 md:ml-4 text-[#5C4D3C]/70">
             Chú rể
           </p>
         </motion.div>
@@ -78,12 +78,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[10%] md:bottom-[8%] lg:bottom-[10%] right-[2%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
+          className="absolute bottom-[16%] md:bottom-[8%] lg:bottom-[10%] right-[5%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
         >
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             &amp; Nhàn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-4 md:mt-8 lg:mt-12 xl:mt-16 md:mr-4 text-[#5C4D3C]/70">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-0 md:mt-8 lg:mt-12 xl:mt-16 md:mr-4 text-[#5C4D3C]/70">
             Cô dâu
           </p>
         </motion.div>
