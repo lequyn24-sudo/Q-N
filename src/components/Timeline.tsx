@@ -58,7 +58,7 @@ export default function Timeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-            className="md:hidden text-center order-2 mt-4 mb-2"
+            className="md:hidden text-center order-2 mt-8 mb-2"
           >
             <p className="font-jetbrains font-bold text-vintage-ivory/70 text-[10px] tracking-[0.3em] uppercase">
               Tức Ngày 26 Tháng 8 Năm Bính Ngọ
