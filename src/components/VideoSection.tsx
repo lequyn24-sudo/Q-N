@@ -1,12 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Play, Pause } from "lucide-react";
 
 export default function VideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
+
+  // Thử ép video tự động chạy bằng cách dùng sự kiện tương tác của người dùng
+  useEffect(() => {
+    const attemptPlay = () => {
+      if (videoRef.current && videoRef.current.paused) {
+        videoRef.current.play().then(() => {
+          setIsPlaying(true);
+        }).catch(() => {
+          // Trình duyệt vẫn chặn
+        });
+      }
+    };
+
+    // Khi người dùng cuộn trang hoặc chạm vào màn hình, cố gắng ép video chạy
+    window.addEventListener('touchstart', attemptPlay, { passive: true });
+    window.addEventListener('scroll', attemptPlay, { passive: true });
+    window.addEventListener('click', attemptPlay, { passive: true });
+
+    // Tự động thử một lần lúc component load
+    attemptPlay();
+
+    return () => {
+      window.removeEventListener('touchstart', attemptPlay);
+      window.removeEventListener('scroll', attemptPlay);
+      window.removeEventListener('click', attemptPlay);
+    };
+  }, []);
 
   const toggleVideo = () => {
     if (videoRef.current) {
