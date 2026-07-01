@@ -67,7 +67,7 @@ export default function Hero() {
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[1em] pb-[0.5em]">
             Quyn
           </h1>
-          <p className="absolute top-[85%] md:top-[95%] left-0 md:left-4 font-jetbrains text-[10px] md:text-xs tracking-widest uppercase text-[#5C4D3C]/70">
+          <p className="absolute top-[85%] md:top-[110%] left-0 md:left-4 font-jetbrains text-[10px] md:text-xs tracking-widest uppercase text-[#5C4D3C]/70">
             Chú rể
           </p>
         </motion.div>
