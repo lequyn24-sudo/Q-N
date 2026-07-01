@@ -62,9 +62,9 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[2%] md:top-[15%] left-[5%] md:left-[5%] lg:left-[8%] z-30"
+          className="absolute top-[12%] md:top-[15%] left-[5%] md:left-[5%] lg:left-[8%] z-30"
         >
-          <h1 className="font-serif text-[4.5rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
+          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             Quyn
           </h1>
           <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:ml-2 text-[#5C4D3C]/70">
@@ -78,9 +78,9 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[2%] md:bottom-[15%] right-[5%] md:right-[5%] lg:right-[8%] z-30 text-right"
+          className="absolute bottom-[14%] md:bottom-[15%] right-[5%] md:right-[5%] lg:right-[8%] z-30 text-right"
         >
-          <h1 className="font-serif text-[4.5rem] md:text-6xl lg:text-7xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
+          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             &amp; Nhàn
           </h1>
           <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:mr-2 text-[#5C4D3C]/70">

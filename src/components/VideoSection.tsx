@@ -32,13 +32,14 @@ export default function VideoSection() {
           transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
           className="relative w-full max-w-4xl aspect-[16/9] md:aspect-video bg-vintage-ivory p-3 shadow-2xl -rotate-1 z-10"
         >
-          <div className="w-full h-full relative overflow-hidden bg-black">
+          <div className="w-full h-full relative overflow-hidden bg-vintage-ivory">
             <video 
               src="/videos/motorcycle.mp4" 
               autoPlay 
               loop 
               muted 
               playsInline
+              poster="/images/hero-lineart.jpg"
               className="object-cover w-full h-full grayscale-[40%] sepia-[30%] contrast-110 opacity-90"
             />
             
