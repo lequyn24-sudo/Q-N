@@ -135,6 +135,14 @@ export default function GuestManagement() {
     return matchesSearch;
   });
 
+  const totalExpected = filteredGuests.reduce((sum, g) => sum + (g.guest_count || 1), 0);
+  const totalAttending = filteredGuests.reduce((sum, g) => {
+    if (g.rsvp && g.rsvp.length > 0 && g.rsvp[0].attendance) {
+      return sum + g.rsvp[0].attending_count;
+    }
+    return sum;
+  }, 0);
+
   return (
     <div className="p-8 max-w-7xl mx-auto text-neutral-800">
       <div className="flex justify-between items-center mb-8">
@@ -211,6 +219,7 @@ export default function GuestManagement() {
                 <th className="px-6 py-4">Mã thiệp</th>
                 <th className="px-6 py-4">Trạng thái mở</th>
                 <th className="px-6 py-4">RSVP</th>
+                <th className="px-6 py-4">Số lượng tham gia</th>
                 <th className="px-6 py-4 text-right">Thao tác</th>
               </tr>
             </thead>
@@ -224,7 +233,7 @@ export default function GuestManagement() {
                 </tr>
               ) : filteredGuests.length === 0 ? (
                 <tr>
-                  <td colSpan={7} className="px-6 py-12 text-center text-neutral-400">
+                  <td colSpan={6} className="px-6 py-12 text-center text-neutral-400">
                     Không tìm thấy khách mời nào.
                   </td>
                 </tr>
@@ -262,7 +271,7 @@ export default function GuestManagement() {
                           rsvp.attendance ? (
                             <div className="flex items-center gap-1.5 text-emerald-600">
                               <CheckCircle2 className="w-4 h-4" />
-                              <span className="text-xs font-medium">Tham gia ({rsvp.attending_count})</span>
+                              <span className="text-xs font-medium">Tham gia</span>
                             </div>
                           ) : (
                             <div className="flex items-center gap-1.5 text-red-500">
@@ -275,6 +284,13 @@ export default function GuestManagement() {
                             <HelpCircle className="w-4 h-4" />
                             <span className="text-xs">Chưa phản hồi</span>
                           </div>
+                        )}
+                      </td>
+                      <td className="px-6 py-4">
+                        {rsvp && rsvp.attendance ? (
+                          <div className="font-medium text-neutral-900">{rsvp.attending_count} <span className="text-neutral-500 font-normal">người</span></div>
+                        ) : (
+                          <div className="text-neutral-400">-</div>
                         )}
                       </td>
                       <td className="px-6 py-4 text-right">
@@ -320,6 +336,19 @@ export default function GuestManagement() {
                 })
               )}
             </tbody>
+            {filteredGuests.length > 0 && !loading && (
+              <tfoot className="bg-neutral-50 border-t border-neutral-200">
+                <tr>
+                  <td colSpan={4} className="px-6 py-4 text-right font-medium text-neutral-600">
+                    Tổng số người tham gia:
+                  </td>
+                  <td className="px-6 py-4 font-bold text-emerald-600 text-lg">
+                    {totalAttending}
+                  </td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            )}
           </table>
         </div>
       </div>
