@@ -3,15 +3,35 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function RSVP() {
+import { supabase } from "@/lib/supabase";
+
+export default function RSVP({ guestData }: { guestData?: any }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [attendingCount, setAttendingCount] = useState<number>(guestData?.guest_count || 1);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!guestData) return;
+    
     setStatus("submitting");
-    setTimeout(() => {
+    const form = e.target as HTMLFormElement;
+    const attending = form.attending.value === "yes";
+    
+    const { error } = await supabase.rpc("submit_rsvp", {
+      p_guest_id: guestData.id,
+      p_attendance: attending,
+      p_count: attending ? attendingCount : 0,
+      p_message: ""
+    });
+
+    if (error) {
+      console.error(error);
+      setStatus("idle");
+      alert("Có lỗi xảy ra, vui lòng thử lại sau.");
+    } else {
       setStatus("success");
-    }, 1500);
+    }
   };
 
   return (
@@ -48,19 +68,21 @@ export default function RSVP() {
                 <label className="block text-vintage-dusty-green uppercase tracking-[0.2em] text-[10px] font-jetbrains mb-4 text-center">Họ và Tên</label>
                 <input 
                   type="text" 
-                  required
-                  className="w-full bg-transparent border-b border-vintage-ink/20 py-2 text-center text-2xl text-vintage-ink focus:outline-none focus:border-vintage-sepia transition-colors placeholder:text-vintage-ink/20"
-                  placeholder="M.........................................................."
+                  value={guestData?.name || ""}
+                  disabled
+                  className="w-full bg-transparent border-b border-vintage-ink/20 py-2 text-center text-2xl text-vintage-ink focus:outline-none focus:border-vintage-sepia transition-colors placeholder:text-vintage-ink/20 opacity-70"
                 />
               </div>
 
               <div className="mt-10">
-                <label className="block text-vintage-dusty-green uppercase tracking-[0.2em] text-[10px] font-jetbrains mb-4 text-center">Số lượng người tham dự</label>
+                <label className="block text-vintage-dusty-green uppercase tracking-[0.2em] text-[10px] font-jetbrains mb-4 text-center">Số lượng người tham dự (Tối đa {guestData?.guest_count || 1})</label>
                 <input 
                   type="number" 
                   min="1"
+                  max={guestData?.guest_count || 1}
+                  value={attendingCount}
+                  onChange={(e) => setAttendingCount(parseInt(e.target.value))}
                   className="w-full bg-transparent border-b border-vintage-ink/20 py-2 text-center text-2xl font-serif text-vintage-ink focus:outline-none focus:border-vintage-sepia transition-colors placeholder:text-vintage-ink/20"
-                  placeholder="2"
                 />
               </div>
               
