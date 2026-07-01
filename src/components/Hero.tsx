@@ -64,10 +64,10 @@ export default function Hero() {
           style={{ y: y2 }}
           className="absolute top-[15%] md:top-[8%] lg:top-[10%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
         >
-          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text py-4 px-2 md:py-8 md:px-4">
+          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text leading-[1.5] py-4">
             Quyn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-2 md:-mt-2 lg:mt-2 xl:mt-4 md:ml-4 text-[#5C4D3C]/70">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-8 md:-mt-12 lg:-mt-16 md:ml-4 text-[#5C4D3C]/70">
             Chú rể
           </p>
         </motion.div>
@@ -80,10 +80,10 @@ export default function Hero() {
           style={{ y: y2 }}
           className="absolute bottom-[16%] md:bottom-[8%] lg:bottom-[10%] right-[5%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
         >
-          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text py-4 px-2 md:py-8 md:px-4">
+          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text leading-[1.5] py-4">
             &amp; Nhàn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-2 md:-mt-2 lg:mt-2 xl:mt-4 md:mr-4 text-[#5C4D3C]/70">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-8 md:-mt-12 lg:-mt-16 md:mr-4 text-[#5C4D3C]/70">
             Cô dâu
           </p>
         </motion.div>
