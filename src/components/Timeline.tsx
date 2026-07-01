@@ -24,7 +24,7 @@ export default function Timeline() {
         </motion.div>
 
         {/* Main Content Area */}
-        <div className="relative w-full flex flex-col md:flex-row items-center justify-center gap-12 md:gap-8">
+        <div className="relative w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
           
           {/* Left Text */}
           <motion.div 
@@ -100,7 +100,7 @@ export default function Timeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-          className="mt-20 text-center"
+          className="mt-12 md:mt-20 text-center"
         >
           <p className="font-jetbrains font-bold text-vintage-ivory/70 text-[10px] md:text-xs tracking-[0.3em] uppercase">
             Tức Ngày 26 Tháng 8 Năm Bính Ngọ
