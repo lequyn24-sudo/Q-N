@@ -33,21 +33,24 @@ export default function Hero() {
         >
           {/* The Actual Photo */}
           <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-            <div className="relative w-full h-full [clip-path:ellipse(39%_30.5%_at_50%_51.5%)]">
+            <div className="relative w-full h-full [clip-path:ellipse(39%_30.5%_at_50%_51.5%)] bg-vintage-bg/50">
+              {/* Large Ampersand Overlay BEHIND the characters */}
+              <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-80">
+                <span 
+                  style={{ fontFamily: "'Bonthing', var(--font-script)" }} 
+                  className="text-[16rem] md:text-[26rem] leading-none text-vintage-ink translate-x-4 md:translate-x-10 -translate-y-8 md:-translate-y-12 drop-shadow-sm"
+                >
+                  &amp;
+                </span>
+              </div>
+              
               <Image 
                 src="/images/hero-lineart-916.png" 
                 alt="Quyn & Nhàn" 
                 fill 
-                className="object-cover scale-[1.15] translate-y-[4%] object-center grayscale-[50%] sepia-[15%] contrast-110"
+                className="object-cover scale-[1.15] translate-y-[4%] object-center grayscale-[50%] sepia-[15%] contrast-110 relative z-10"
                 priority
               />
-              
-              {/* Large Ampersand Overlay inside the frame */}
-              <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none mix-blend-multiply opacity-90">
-                <span className="font-script text-[12rem] md:text-[20rem] text-vintage-ink translate-x-12 md:translate-x-20 -translate-y-12 md:-translate-y-16">
-                  &amp;
-                </span>
-              </div>
             </div>
           </div>
 
