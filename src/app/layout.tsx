@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Inter, Cormorant_Garamond, JetBrains_Mono, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -18,13 +19,19 @@ const cormorant = Cormorant_Garamond({
 const jetbrains = JetBrains_Mono({
   weight: ['300', '400', '500'],
   variable: "--font-jetbrains",
-  subsets: ["latin"], // JetBrains Mono might not explicitly have 'vietnamese', latin is fine for numbers
+  subsets: ["latin"],
 });
 
 const scriptFont = Dancing_Script({
   weight: ['400', '500', '600', '700'],
   variable: "--font-script",
   subsets: ["latin", "vietnamese"],
+});
+
+const bonthingFont = localFont({
+  src: "../../public/fonts/Bonthing.ttf",
+  variable: "--font-bonthing",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable} ${scriptFont.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${jetbrains.variable} ${scriptFont.variable} ${bonthingFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-vintage-bg text-vintage-ink relative">
         {/* Global Vintage Texture Overlay */}

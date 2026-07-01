@@ -27,13 +27,13 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
+          transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
           style={{ y: y1 }}
-          className="relative h-[70vh] md:h-[80vh] max-h-[800px] aspect-[9/16] z-10 flex items-center justify-center max-w-[90vw]"
+          className="relative w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[3/4] z-20 mx-auto mt-4"
         >
           {/* The Actual Photo */}
           <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-            <div className="relative w-full h-full [clip-path:ellipse(39%_30.5%_at_50%_51.5%)]">
+            <div className="relative w-full h-full [clip-path:ellipse(39%_30.5%_at_50%_51.5%)] bg-vintage-bg">
               <Image 
                 src="/images/hero-lineart-916.png" 
                 alt="Quyn & Nhàn" 
@@ -41,15 +41,10 @@ export default function Hero() {
                 className="object-cover scale-[1.15] translate-y-[4%] object-center grayscale-[50%] sepia-[15%] contrast-110"
                 priority
               />
-              
-              {/* Large Ampersand Overlay */}
-              {/* Lưu ý: Đặt mix-blend-multiply vì ảnh hero-lineart-916.png có viền nền đặc (solid beige). 
-                  Nếu đặt z-index thấp (để lùi ra sau), nó sẽ bị nền của ảnh che mất hoàn toàn. */}
-              <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none mix-blend-multiply opacity-80">
-                <span 
-                  style={{ fontFamily: "'Bonthing', var(--font-script)" }} 
-                  className="text-[16rem] md:text-[26rem] leading-none text-vintage-ink translate-x-4 md:translate-x-10 -translate-y-8 md:-translate-y-12"
-                >
+
+              {/* Chữ & đặt lên TRÊN ảnh vì ảnh không trong suốt. Hạ opacity để không che mặt */}
+              <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none opacity-[0.15]">
+                <span className="font-bonthing text-[20rem] md:text-[30rem] leading-none text-vintage-ink translate-x-10 -translate-y-8 drop-shadow-sm">
                   &amp;
                 </span>
               </div>
@@ -74,7 +69,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[8%] md:top-[12%] left-1/2 -translate-x-1/2 z-30 w-full text-center px-4"
+          className="absolute top-[14%] md:top-[16%] left-1/2 -translate-x-1/2 z-30 w-full text-center px-4"
         >
           <h1 className="font-script text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-vintage-ink tracking-wide">
             Quyn Lê
@@ -87,7 +82,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[12%] md:bottom-[10%] left-1/2 -translate-x-1/2 z-30 w-full text-center px-4"
+          className="absolute bottom-[16%] md:bottom-[14%] left-1/2 -translate-x-1/2 z-30 w-full text-center px-4"
         >
           <h1 className="font-script text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-vintage-ink tracking-wide">
             Nhàn Bùi

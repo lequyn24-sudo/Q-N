@@ -24,6 +24,10 @@
   font-family: var(--font-script);
 }
 
+@utility font-bonthing {
+  font-family: var(--font-bonthing);
+}
+
 @utility text-emboss {
   color: #e3ddcf; /* Slightly darker than background for depth */
   text-shadow: 
