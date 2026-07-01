@@ -35,7 +35,7 @@ export default function Timeline() {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-left z-20 order-2 md:order-1"
           >
-            <p className="font-sans text-vintage-dusty-green text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
+            <p className="font-jetbrains text-vintage-dusty-green text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
               Ngày Chúng Mình
             </p>
           </motion.div>
@@ -48,7 +48,7 @@ export default function Timeline() {
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
             className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 text-center md:text-right z-20 order-3 md:order-3"
           >
-            <p className="font-sans text-vintage-dusty-green text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
+            <p className="font-jetbrains text-vintage-dusty-green text-[10px] md:text-xs lg:text-sm tracking-[0.3em] uppercase">
               Chính Thức <br className="hidden md:block" />Về Chung Nhà
             </p>
           </motion.div>
@@ -103,7 +103,7 @@ export default function Timeline() {
           transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
           className="mt-20 text-center"
         >
-          <p className="font-sans text-vintage-soft-brown text-[10px] md:text-xs tracking-[0.3em] uppercase">
+          <p className="font-jetbrains text-vintage-soft-brown text-[10px] md:text-xs tracking-[0.3em] uppercase">
             Tức Ngày 26 Tháng 8 Năm Bính Ngọ
           </p>
         </motion.div>

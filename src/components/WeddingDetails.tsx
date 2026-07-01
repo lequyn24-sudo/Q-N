@@ -19,7 +19,7 @@ export default function WeddingDetails() {
             className="md:col-span-12 lg:col-span-6 lg:col-start-2 z-20 space-y-16"
           >
             <div>
-              <p className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-6">Chương IV — Địa Điểm</p>
+              <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-6">Chương IV — Địa Điểm</p>
               <h2 className="font-serif text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none tracking-tight text-vintage-ink">
                 Chung Vui <br/>
                 <span className="italic text-vintage-burgundy ml-12 md:ml-24">Cùng Chúng Mình</span>
@@ -32,7 +32,7 @@ export default function WeddingDetails() {
                 <p className="font-serif text-xl text-vintage-soft-brown leading-relaxed mb-6">
                   Hôn lễ và tiệc mừng của chúng mình sẽ được tổ chức tại một khu vườn thơ mộng. Với không gian xanh mát và lãng mạn, đây là nơi hoàn hảo để chúng mình bắt đầu chương mới của cuộc đời.
                 </p>
-                <address className="not-italic font-sans text-xs uppercase tracking-widest text-vintage-ink/70 leading-loose">
+                <address className="not-italic font-jetbrains text-xs uppercase tracking-widest text-vintage-ink/70 leading-loose">
                   Khu Vườn Cổ Tích<br/>
                   123 Đường Hoa Hồng<br/>
                   Đà Lạt, Lâm Đồng
@@ -71,7 +71,7 @@ export default function WeddingDetails() {
               <h3 className="font-script text-5xl md:text-7xl mb-4 text-vintage-champagne text-center -mt-6">
                 Trang Phục
               </h3>
-              <p className="font-sans text-[10px] md:text-xs tracking-widest text-vintage-ink/80 leading-relaxed text-center uppercase">
+              <p className="font-jetbrains text-[10px] md:text-xs tracking-widest text-vintage-ink/80 leading-relaxed text-center uppercase">
                 Tối giản và thanh lịch — công thức hoàn hảo dành cho khách mời. Vui lòng chọn trang phục trang trọng, mang âm hưởng Vintage.
               </p>
             </div>

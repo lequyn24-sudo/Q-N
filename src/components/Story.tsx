@@ -17,7 +17,7 @@ export default function Story() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="md:col-span-12 lg:col-span-5 lg:col-start-2 z-20"
           >
-            <p className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-dusty-green mb-6 md:mb-10">
+            <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-dusty-green mb-6 md:mb-10">
               Chương I — Khởi Đầu
             </p>
             <h2 className="font-serif text-[4rem] md:text-[7rem] lg:text-[7.5rem] text-vintage-ink leading-[0.85] tracking-tight">

@@ -42,7 +42,7 @@ export default function Guestbook() {
             <div className="absolute inset-3 border border-vintage-ink/5 pointer-events-none" />
 
             <div className="text-center mb-12">
-              <p className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-dusty-green mb-4">Chương V</p>
+              <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-dusty-green mb-4">Chương V</p>
               <h2 className="font-serif text-[4rem] md:text-[5.5rem] leading-none tracking-tight text-vintage-ink mb-6">Sổ Lưu Bút</h2>
               <div className="w-12 h-px bg-vintage-sepia/40 mx-auto" />
             </div>
@@ -73,7 +73,7 @@ export default function Guestbook() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-transparent text-vintage-ink border border-vintage-ink/40 px-10 py-3 font-sans uppercase tracking-[0.3em] text-[10px] hover:bg-vintage-ink hover:text-vintage-ivory hover:border-vintage-ink transition-all duration-500 disabled:opacity-50 w-full"
+                  className="bg-transparent text-vintage-ink border border-vintage-ink/40 px-10 py-3 font-jetbrains uppercase tracking-[0.3em] text-[10px] hover:bg-vintage-ink hover:text-vintage-ivory hover:border-vintage-ink transition-all duration-500 disabled:opacity-50 w-full"
                 >
                   {isSubmitting ? "Đang Gửi..." : "Gửi Lời Chúc"}
                 </button>
@@ -98,7 +98,7 @@ export default function Guestbook() {
                   <p className="font-serif text-2xl md:text-3xl italic text-vintage-soft-brown leading-relaxed mb-4">
                     "{msg.message}"
                   </p>
-                  <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-vintage-ink/60">
+                  <p className="font-jetbrains text-[10px] tracking-[0.2em] uppercase text-vintage-ink/60">
                     — {msg.name}
                   </p>
                 </div>

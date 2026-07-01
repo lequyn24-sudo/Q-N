@@ -40,12 +40,12 @@ export default function RSVP() {
               className="flex flex-col items-center py-16"
             >
               <h3 className="font-serif text-4xl mb-4 text-vintage-burgundy italic">Cảm Ơn</h3>
-              <p className="font-sans text-xs tracking-widest uppercase text-vintage-ink/50">Phản hồi của bạn đã được ghi nhận</p>
+              <p className="font-jetbrains text-xs tracking-widest uppercase text-vintage-ink/50">Phản hồi của bạn đã được ghi nhận</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-12 font-serif px-4 md:px-12 relative z-10">
               <div>
-                <label className="block text-vintage-dusty-green uppercase tracking-[0.2em] text-[10px] font-sans mb-4 text-center">Họ và Tên</label>
+                <label className="block text-vintage-dusty-green uppercase tracking-[0.2em] text-[10px] font-jetbrains mb-4 text-center">Họ và Tên</label>
                 <input 
                   type="text" 
                   required
@@ -73,7 +73,7 @@ export default function RSVP() {
                 <button 
                   type="submit" 
                   disabled={status === "submitting"}
-                  className="bg-transparent text-vintage-ink border border-vintage-ink/40 px-12 py-4 font-sans uppercase tracking-[0.3em] text-[10px] hover:bg-vintage-ink hover:text-vintage-ivory hover:border-vintage-ink transition-all duration-500 disabled:opacity-50 w-full md:w-auto"
+                  className="bg-transparent text-vintage-ink border border-vintage-ink/40 px-12 py-4 font-jetbrains uppercase tracking-[0.3em] text-[10px] hover:bg-vintage-ink hover:text-vintage-ivory hover:border-vintage-ink transition-all duration-500 disabled:opacity-50 w-full md:w-auto"
                 >
                   {status === "submitting" ? "Đang Gửi..." : "Gửi Phản Hồi"}
                 </button>

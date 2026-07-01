@@ -69,7 +69,7 @@ export default function VideoSection() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-12"
         >
-          <p className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-4">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-4">
             Cuộc Sống Là Một Chuyến Đi
           </p>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-vintage-ink leading-tight tracking-tight italic">

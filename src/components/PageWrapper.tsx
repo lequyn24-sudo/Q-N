@@ -15,8 +15,8 @@ const PageWrapper = forwardRef<HTMLDivElement, PageProps>(({ children, pageNumbe
       <div className="h-full w-full p-6 md:p-12 flex flex-col">
         {/* Newspaper Header for inner pages */}
         {pageNumber && pageNumber > 1 && (
-          <div className="flex justify-between items-center border-b border-newspaper-border pb-2 mb-6 font-serif text-xs md:text-sm tracking-widest uppercase">
-            <span>May 4th, 2024</span>
+          <div className="flex justify-between items-center border-b border-newspaper-border pb-2 mb-6 font-jetbrains text-xs md:text-sm tracking-widest uppercase">
+            <span>August 8, 2026</span>
             <span className="font-unifraktur text-lg lowercase tracking-normal">The Wedding Post</span>
             <span>Page {pageNumber}</span>
           </div>
