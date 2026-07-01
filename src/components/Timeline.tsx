@@ -59,7 +59,7 @@ export default function Timeline() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
             className="relative bg-vintage-ivory w-72 md:w-80 lg:w-96 aspect-square shadow-2xl flex flex-col items-center justify-center text-vintage-ink p-8 order-1 md:order-2 z-10 border border-vintage-ink/5"
-            style={{ boxShadow: '8px 12px 25px rgba(52, 38, 25, 0.15), -4px -4px 10px rgba(253, 251, 247, 0.5)' }}
+            style={{ boxShadow: '15px 25px 50px rgba(0, 0, 0, 0.5)' }}
           >
             {/* Paperclip */}
             <div className="absolute -top-6 left-6 text-vintage-ink/40 opacity-80 rotate-12 drop-shadow-sm">
