@@ -89,13 +89,16 @@ export default function Hero() {
         </motion.div>
 
         {/* Central Small Text */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 3 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center font-jetbrains text-[10px] md:text-xs uppercase tracking-[0.3em] text-vintage-ink/80"
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 2.8, ease: "easeOut" }}
+          style={{ y: y1 }}
+          className="absolute bottom-[10%] md:bottom-[5%] left-1/2 -translate-x-1/2 z-30 text-center pointer-events-none"
         >
-          Giấc Mơ Hoài Cổ <br/> 08 . 08 . 2026
+          <p className="font-jetbrains text-[8px] md:text-[10px] tracking-[0.4em] md:tracking-[0.5em] uppercase text-[#5C4D3C]/60 leading-loose whitespace-nowrap">
+            The Design Of Us <br/> 08 . 08 . 2026
+          </p>
         </motion.div>
 
       </motion.div>

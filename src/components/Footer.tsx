@@ -26,7 +26,7 @@ export default function Footer() {
 
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 font-jetbrains text-xs tracking-[0.2em] uppercase text-vintage-ink/50 border-t border-vintage-ink/10 pt-12">
             <span>© 2026 Quyn & Nhàn</span>
-            <span>Giấc Mơ Hoài Cổ</span>
+            <span>The Design Of Us</span>
             <span>Đà Lạt, VN</span>
           </div>
         </motion.div>
