@@ -30,7 +30,7 @@ export default function RSVP() {
           <div className="text-center mb-16 mt-4">
             <h2 className="font-serif text-5xl md:text-7xl text-vintage-ink mb-6 tracking-tight">Hồi Đáp</h2>
             <div className="w-16 h-px bg-vintage-sepia/40 mx-auto mb-6" />
-            <p className="font-serif italic text-vintage-soft-brown text-lg md:text-xl">Vui lòng phản hồi trước ngày 1 tháng 8</p>
+            <p className="font-serif italic text-vintage-soft-brown text-lg md:text-xl">Xác nhận tham dự</p>
           </div>
 
           {status === "success" ? (
