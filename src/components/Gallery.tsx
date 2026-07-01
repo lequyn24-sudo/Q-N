@@ -38,7 +38,6 @@ export default function Gallery() {
             <div className="w-full h-full relative overflow-hidden">
               <Image src="/images/gallery-1.png" alt="Gallery 1" fill className="object-cover grayscale-[50%] sepia-[20%] contrast-110" />
             </div>
-            <div className="absolute -bottom-10 -right-10 font-script text-4xl text-vintage-sepia/60 -rotate-6">Nụ Cười</div>
           </motion.div>
 
           {/* Image 2: Wide Landscape */}
@@ -66,14 +65,6 @@ export default function Gallery() {
               <Image src="/images/gallery-3.png" alt="Gallery 3" fill className="object-cover grayscale-[60%] sepia-[25%] contrast-110" />
             </div>
           </motion.div>
-          
-          {/* Decorative Large Type in background */}
-          <div className="absolute bottom-[10%] left-0 w-full text-center pointer-events-none z-0 overflow-hidden">
-             <h3 className="font-serif text-[15vw] text-vintage-ink/5 leading-none whitespace-nowrap opacity-30 select-none">
-               Vẻ Đẹp Vượt Thời Gian
-             </h3>
-          </div>
-
         </div>
       </div>
     </section>
