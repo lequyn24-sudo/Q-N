@@ -27,9 +27,9 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+          transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
           style={{ y: y1 }}
-          className="relative w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[3/4] z-20 mx-auto mt-4"
+          className="relative h-[70vh] md:h-[80vh] max-h-[800px] aspect-[9/16] z-10 flex items-center justify-center max-w-[90vw]"
         >
           {/* The Actual Photo */}
           <div className="absolute inset-0 w-full h-full flex items-center justify-center">
