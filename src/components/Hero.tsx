@@ -33,24 +33,26 @@ export default function Hero() {
         >
           {/* The Actual Photo */}
           <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-            <div className="relative w-full h-full [clip-path:ellipse(39%_30.5%_at_50%_51.5%)] bg-vintage-bg/50">
-              {/* Large Ampersand Overlay BEHIND the characters */}
-              <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-80">
-                <span 
-                  style={{ fontFamily: "'Bonthing', var(--font-script)" }} 
-                  className="text-[16rem] md:text-[26rem] leading-none text-vintage-ink translate-x-4 md:translate-x-10 -translate-y-8 md:-translate-y-12 drop-shadow-sm"
-                >
-                  &amp;
-                </span>
-              </div>
-              
+            <div className="relative w-full h-full [clip-path:ellipse(39%_30.5%_at_50%_51.5%)]">
               <Image 
                 src="/images/hero-lineart-916.png" 
                 alt="Quyn & Nhàn" 
                 fill 
-                className="object-cover scale-[1.15] translate-y-[4%] object-center grayscale-[50%] sepia-[15%] contrast-110 relative z-10"
+                className="object-cover scale-[1.15] translate-y-[4%] object-center grayscale-[50%] sepia-[15%] contrast-110"
                 priority
               />
+              
+              {/* Large Ampersand Overlay */}
+              {/* Lưu ý: Đặt mix-blend-multiply vì ảnh hero-lineart-916.png có viền nền đặc (solid beige). 
+                  Nếu đặt z-index thấp (để lùi ra sau), nó sẽ bị nền của ảnh che mất hoàn toàn. */}
+              <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none mix-blend-multiply opacity-80">
+                <span 
+                  style={{ fontFamily: "'Bonthing', var(--font-script)" }} 
+                  className="text-[16rem] md:text-[26rem] leading-none text-vintage-ink translate-x-4 md:translate-x-10 -translate-y-8 md:-translate-y-12"
+                >
+                  &amp;
+                </span>
+              </div>
             </div>
           </div>
 
