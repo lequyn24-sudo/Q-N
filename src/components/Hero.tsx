@@ -80,10 +80,10 @@ export default function Hero() {
           style={{ y: y2 }}
           className="absolute bottom-[10%] md:bottom-[5%] lg:bottom-[8%] right-[5%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
         >
-          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[0.5em] pb-[1em]">
+          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[1em] pb-[1.5em]">
             &amp; Nhàn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-[1em] translate-y-4 md:translate-y-10 lg:translate-y-14 md:mr-4 text-[#5C4D3C]/70 relative z-10">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-[1.5em] translate-y-4 md:translate-y-10 lg:translate-y-14 md:mr-4 text-[#5C4D3C]/70 relative z-10">
             Cô dâu
           </p>
         </motion.div>
