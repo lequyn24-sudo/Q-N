@@ -67,7 +67,7 @@ export default function Hero() {
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[1em] pb-[0.5em]">
             Quyn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-[0.5em] translate-y-2 md:translate-y-8 lg:translate-y-12 md:ml-4 text-[#5C4D3C]/70 relative z-10">
+          <p className="absolute top-[85%] md:top-[85%] left-0 md:left-4 font-jetbrains text-[10px] md:text-xs tracking-widest uppercase text-[#5C4D3C]/70">
             Chú rể
           </p>
         </motion.div>
@@ -83,7 +83,7 @@ export default function Hero() {
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[1em] pb-[1.5em]">
             &amp; Nhàn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-[1.5em] translate-y-4 md:translate-y-10 lg:translate-y-14 md:mr-4 text-[#5C4D3C]/70 relative z-10">
+          <p className="absolute top-[60%] md:top-[65%] right-0 md:right-4 font-jetbrains text-[10px] md:text-xs tracking-widest uppercase text-[#5C4D3C]/70">
             Cô dâu
           </p>
         </motion.div>
