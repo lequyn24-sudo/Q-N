@@ -24,11 +24,11 @@ export default function Story() {
             </h2>
             <div className="mt-12 md:mt-20 space-y-8 font-jetbrains text-xs md:text-sm leading-loose text-vintage-soft-brown max-w-xl text-justify">
               <p>
-              <span className="font-serif text-5xl float-left mr-3 mt-1 text-vintage-burgundy leading-none">G</span>
-                iống như một tác phẩm nghệ thuật được chế tác tuyệt đẹp, câu chuyện của chúng mình không phải do tình cờ mà có—nó được thiết kế tỉ mỉ bởi thời gian, sự kiên nhẫn và những ước mơ chung. Mỗi nét vẽ trên chặng đường chúng mình đi cùng nhau đều tô điểm thêm chiều sâu và sự ấm áp cho cuộc sống của cả hai.
+              <span className="font-serif text-5xl float-left mr-3 mt-1 text-vintage-burgundy leading-none">K</span>
+                hông phải mọi bản thiết kế đều bắt đầu từ một ý tưởng hoàn hảo. Có những điều được tạo nên qua từng lần chỉnh sửa, từng cuộc trò chuyện và những ngày cùng nhau cố gắng. Chúng mình gặp nhau vì cùng làm design, rồi dần nhận ra điều đẹp nhất mình tạo ra không phải là một sản phẩm, mà là một mối quan hệ.
               </p>
               <p>
-                Từ những phác thảo lặng lẽ của những ngày đầu cho đến kiệt tác rực rỡ mà chúng mình đang cùng nhau xây dựng hôm nay, mỗi khoảnh khắc đều là sự lựa chọn đầy ý thức để luôn chọn lấy nhau. Đây chính là tạo tác tuyệt vời nhất của chúng mình.
+                Đến hôm nay, bản thiết kế ấy vẫn đang được hoàn thiện mỗi ngày—bằng sự thấu hiểu, tôn trọng và lựa chọn đồng hành. Và có lẽ, đây sẽ luôn là project mà cả hai muốn dành nhiều tâm huyết nhất.
               </p>
             </div>
           </motion.div>
