@@ -62,12 +62,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[15%] md:top-[15%] lg:top-[18%] xl:top-[20%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
+          className="absolute top-[8%] md:top-[5%] lg:top-[8%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
         >
-          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text py-[0.4em] -my-[0.4em]">
+          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[1em] pb-[0.5em]">
             Quyn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:mt-8 lg:mt-12 xl:mt-16 md:ml-4 text-[#5C4D3C]/70 relative z-10">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-[0.5em] translate-y-2 md:translate-y-8 lg:translate-y-12 md:ml-4 text-[#5C4D3C]/70 relative z-10">
             Chú rể
           </p>
         </motion.div>
@@ -78,12 +78,12 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.7, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute bottom-[16%] md:bottom-[12%] lg:bottom-[15%] xl:bottom-[18%] right-[5%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
+          className="absolute bottom-[10%] md:bottom-[5%] lg:bottom-[8%] right-[5%] md:right-[2%] lg:right-[5%] z-30 flex flex-col items-end text-right"
         >
-          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text py-[0.4em] -my-[0.4em]">
+          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[0.5em] pb-[1em]">
             &amp; Nhàn
           </h1>
-          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:mt-8 lg:mt-12 xl:mt-16 md:mr-4 text-[#5C4D3C]/70 relative z-10">
+          <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase -mt-[1em] translate-y-4 md:translate-y-10 lg:translate-y-14 md:mr-4 text-[#5C4D3C]/70 relative z-10">
             Cô dâu
           </p>
         </motion.div>
