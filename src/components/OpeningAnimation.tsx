@@ -10,25 +10,13 @@ export default function OpeningAnimation() {
     // Disable scroll while opening animation is active
     document.body.style.overflow = "hidden";
     
-    // Xóa timeout tự động đóng, bắt buộc người dùng click để mở
-    return () => {
+    const timer = setTimeout(() => {
+      setShow(false);
       document.body.style.overflow = "auto";
-    };
+    }, 2500);
+
+    return () => clearTimeout(timer);
   }, []);
-
-  const handleOpen = () => {
-    // Kích hoạt tất cả video và audio ngay trong sự kiện click để vượt mặt chặn autoplay của Zalo/Messenger/Safari
-    document.querySelectorAll('video').forEach(video => {
-      video.play().catch(() => {});
-    });
-    document.querySelectorAll('audio').forEach(audio => {
-      audio.play().catch(() => {});
-    });
-
-    // Mở thiệp
-    setShow(false);
-    document.body.style.overflow = "auto";
-  };
 
   return (
     <AnimatePresence>
@@ -69,7 +57,7 @@ export default function OpeningAnimation() {
               </motion.h1>
             </motion.div>
             
-            <motion.div className="overflow-hidden mb-12">
+            <motion.div className="overflow-hidden">
               <motion.p
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -79,26 +67,6 @@ export default function OpeningAnimation() {
                 A Vintage Dream
               </motion.p>
             </motion.div>
-
-            {/* Nút bấm để mở thiệp - Bắt buộc tương tác */}
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
-              onClick={handleOpen}
-              className="px-8 py-3 bg-transparent border border-vintage-ink/40 text-vintage-ink font-jetbrains text-xs tracking-widest uppercase hover:bg-vintage-ink/5 transition-all duration-300 relative group overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Chạm để mở thiệp
-              </span>
-              {/* Hiệu ứng nhấp nháy thu hút sự chú ý */}
-              <div className="absolute inset-0 bg-vintage-ink/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-              <motion.div 
-                animate={{ opacity: [0.3, 1, 0.3] }} 
-                transition={{ repeat: Infinity, duration: 2 }}
-                className="absolute inset-0 border border-vintage-ink opacity-30 pointer-events-none" 
-              />
-            </motion.button>
           </div>
         </motion.div>
       )}

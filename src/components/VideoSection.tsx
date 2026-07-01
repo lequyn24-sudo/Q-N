@@ -1,56 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { useRef, useState, useEffect } from "react";
-import { Play, Pause } from "lucide-react";
 
 export default function VideoSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // Đảm bảo thuộc tính cho iOS
-    video.setAttribute("playsinline", "true");
-    video.setAttribute("webkit-playsinline", "true");
-
-    // Thử play ngay lập tức
-    const attemptPlay = () => {
-      if (video.paused) {
-        video.play().catch(() => {
-          // Bỏ qua lỗi nếu trình duyệt chặn
-        });
-      }
-    };
-
-    attemptPlay();
-
-    // Bí kíp vượt rào: Lắng nghe tương tác dứt khoát của người dùng (click, touchend) để ép video chạy
-    const interactions = ['click', 'touchend'];
-    
-    const handleInteraction = () => {
-      attemptPlay();
-      // Nếu video đã chạy được, gỡ bỏ lắng nghe để không làm nặng máy
-      if (!video.paused) {
-        interactions.forEach(event => {
-          window.removeEventListener(event, handleInteraction);
-        });
-      }
-    };
-
-    interactions.forEach(event => {
-      window.addEventListener(event, handleInteraction, { passive: true });
-    });
-
-    return () => {
-      interactions.forEach(event => {
-        window.removeEventListener(event, handleInteraction);
-      });
-    };
-  }, []);
-
   return (
     <section className="py-24 md:py-32 px-6 bg-vintage-bg overflow-hidden relative">
       <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
@@ -82,7 +34,6 @@ export default function VideoSection() {
         >
           <div className="w-full h-full relative overflow-hidden bg-vintage-ivory">
             <video 
-              ref={videoRef}
               src="/videos/motorcycle.mp4" 
               autoPlay 
               loop 
