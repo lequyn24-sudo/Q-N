@@ -64,7 +64,7 @@ export default function Hero() {
           style={{ y: y2 }}
           className="absolute top-[8%] md:top-[8%] lg:top-[10%] left-[2%] md:left-[2%] lg:left-[5%] z-30"
         >
-          <h1 className="font-bonthing text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
+          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             Quyn
           </h1>
           <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:ml-4 text-[#5C4D3C]/70">
@@ -80,7 +80,7 @@ export default function Hero() {
           style={{ y: y2 }}
           className="absolute bottom-[10%] md:bottom-[8%] lg:bottom-[10%] right-[2%] md:right-[2%] lg:right-[5%] z-30 text-right"
         >
-          <h1 className="font-bonthing text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
+          <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text">
             &amp; Nhàn
           </h1>
           <p className="font-jetbrains text-[10px] md:text-xs tracking-widest uppercase mt-2 md:mr-4 text-[#5C4D3C]/70">
