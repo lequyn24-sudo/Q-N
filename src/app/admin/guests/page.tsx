@@ -33,6 +33,7 @@ type Guest = {
   opened: boolean;
   opened_at: string | null;
   rsvp: { attendance: boolean; attending_count: number; message: string }[];
+  side: 'groom' | 'bride';
 };
 
 export default function GuestManagement() {
@@ -40,6 +41,7 @@ export default function GuestManagement() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [filter, setFilter] = useState("all");
+  const [activeTab, setActiveTab] = useState<'groom' | 'bride'>('groom');
 
   // Modal states
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -78,6 +80,7 @@ export default function GuestManagement() {
       guest_count: editingGuest?.guest_count || 1,
       table_number: editingGuest?.table_number || null,
       seat_number: editingGuest?.seat_number || null,
+      side: editingGuest?.side || activeTab,
     };
 
     if (editingGuest?.id) {
@@ -119,6 +122,9 @@ export default function GuestManagement() {
     const matchesSearch = g.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           g.invite_code.toLowerCase().includes(searchQuery.toLowerCase());
     
+    // Filter by side
+    if (g.side !== activeTab) return false;
+    
     if (filter === "all") return matchesSearch;
     
     const rsvpStatus = g.rsvp && g.rsvp.length > 0 ? g.rsvp[0].attendance : null;
@@ -145,6 +151,28 @@ export default function GuestManagement() {
         >
           <Plus className="w-4 h-4" />
           Thêm khách mới
+        </button>
+      </div>
+
+      {/* Tabs */}
+      <div className="flex border-b border-neutral-200 mb-6">
+        <button
+          onClick={() => setActiveTab('groom')}
+          className={`px-6 py-3 font-medium text-sm transition-colors relative ${activeTab === 'groom' ? 'text-neutral-900' : 'text-neutral-500 hover:text-neutral-700'}`}
+        >
+          Nhà Trai
+          {activeTab === 'groom' && (
+            <div className="absolute bottom-[-1px] left-0 right-0 h-0.5 bg-neutral-900 rounded-t-full" />
+          )}
+        </button>
+        <button
+          onClick={() => setActiveTab('bride')}
+          className={`px-6 py-3 font-medium text-sm transition-colors relative ${activeTab === 'bride' ? 'text-neutral-900' : 'text-neutral-500 hover:text-neutral-700'}`}
+        >
+          Nhà Gái
+          {activeTab === 'bride' && (
+            <div className="absolute bottom-[-1px] left-0 right-0 h-0.5 bg-neutral-900 rounded-t-full" />
+          )}
         </button>
       </div>
 
@@ -301,7 +329,9 @@ export default function GuestManagement() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
           <div className="bg-white rounded-3xl w-full max-w-lg shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             <div className="flex justify-between items-center p-6 border-b border-neutral-100">
-              <h3 className="text-lg font-medium">{editingGuest?.id ? "Sửa khách mời" : "Thêm khách mới"}</h3>
+              <h3 className="text-lg font-medium">
+                {editingGuest?.id ? "Sửa khách mời" : `Thêm khách mới (${activeTab === 'groom' ? 'Nhà Trai' : 'Nhà Gái'})`}
+              </h3>
               <button onClick={() => setIsModalOpen(false)} className="text-neutral-400 hover:text-neutral-900">
                 <X className="w-5 h-5" />
               </button>
