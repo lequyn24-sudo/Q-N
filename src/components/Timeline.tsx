@@ -76,7 +76,7 @@ export default function Timeline() {
             <div className="text-center w-full mt-4">
               <p className="font-serif text-3xl md:text-4xl tracking-widest mb-2 text-vintage-ink/80">2026</p>
               <p className="font-serif text-2xl md:text-3xl tracking-[0.3em] uppercase border-b border-vintage-ink/20 pb-4 inline-block px-4 text-vintage-ink">
-                Tháng 6
+                Tháng 8
               </p>
             </div>
 
@@ -87,7 +87,7 @@ export default function Timeline() {
               </svg>
               
               <span className="font-script text-[6rem] md:text-[8rem] text-vintage-burgundy italic leading-none z-10 -ml-2">
-                15
+                8
               </span>
             </div>
             
@@ -104,7 +104,7 @@ export default function Timeline() {
           className="mt-20 text-center"
         >
           <p className="font-sans text-vintage-soft-brown text-[10px] md:text-xs tracking-[0.3em] uppercase">
-            Tức Ngày 1 Tháng 5 Năm Bính Ngọ
+            Tức Ngày 26 Tháng 8 Năm Bính Ngọ
           </p>
         </motion.div>
 

@@ -95,7 +95,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 3 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center font-jetbrains text-[10px] md:text-xs uppercase tracking-[0.3em] text-vintage-ink/80"
         >
-          Giấc Mơ Hoài Cổ <br/> 06 . 15 . 2026
+          Giấc Mơ Hoài Cổ <br/> 08 . 08 . 2026
         </motion.div>
 
       </motion.div>
