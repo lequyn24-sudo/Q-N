@@ -62,7 +62,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
           style={{ y: y2 }}
-          className="absolute top-[8%] md:top-[5%] lg:top-[8%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
+          className="absolute top-[14%] md:top-[5%] lg:top-[8%] left-[5%] md:left-[2%] lg:left-[5%] z-30 flex flex-col"
         >
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[1em] pb-[0.5em]">
             Quyn
