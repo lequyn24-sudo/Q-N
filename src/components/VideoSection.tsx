@@ -27,8 +27,8 @@ export default function VideoSection() {
 
     attemptPlay();
 
-    // Bí kíp vượt rào: Lắng nghe bất kỳ tương tác nào của người dùng (chạm, cuộn) để ép video chạy
-    const interactions = ['touchstart', 'click', 'scroll'];
+    // Bí kíp vượt rào: Lắng nghe tương tác dứt khoát của người dùng (click, touchend) để ép video chạy
+    const interactions = ['click', 'touchend'];
     
     const handleInteraction = () => {
       attemptPlay();
