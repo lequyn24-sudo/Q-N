@@ -19,7 +19,7 @@ export default function WeddingDetails() {
             className="md:col-span-12 lg:col-span-6 lg:col-start-2 z-20 space-y-16"
           >
             <div>
-              <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-6">Chương IV — Địa Điểm</p>
+
               <h2 className="font-serif text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none tracking-tight text-vintage-ink">
                 Chung Vui <br/>
                 <span className="italic text-vintage-burgundy ml-12 md:ml-24">Cùng Chúng Mình</span>

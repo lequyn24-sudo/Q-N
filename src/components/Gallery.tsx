@@ -11,7 +11,7 @@ export default function Gallery() {
         {/* Editorial Heading */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 md:mb-32">
           <div className="mb-8 md:mb-0">
-            <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-4">Chương II — Kỷ Niệm</p>
+
             <h2 className="font-serif text-[4rem] md:text-[7rem] lg:text-[7.5rem] text-vintage-ink leading-[0.85] tracking-tight">
               Lưu Giữ <br/>
               <span className="italic text-vintage-soft-brown ml-12 md:ml-32">Khoảnh Khắc</span>

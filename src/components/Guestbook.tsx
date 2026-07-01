@@ -42,7 +42,7 @@ export default function Guestbook() {
             <div className="absolute inset-3 border border-vintage-ink/5 pointer-events-none" />
 
             <div className="text-center mb-12">
-              <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-dusty-green mb-4">Chương V</p>
+
               <h2 className="font-serif text-[4rem] md:text-[5.5rem] leading-none tracking-tight text-vintage-ink mb-6">Sổ Lưu Bút</h2>
               <div className="w-12 h-px bg-vintage-sepia/40 mx-auto" />
             </div>
