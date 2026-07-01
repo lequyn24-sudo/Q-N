@@ -24,8 +24,7 @@ export default function Story() {
             </h2>
             <div className="mt-12 md:mt-20 space-y-8 font-jetbrains text-xs md:text-sm leading-loose text-vintage-soft-brown max-w-xl text-justify">
               <p>
-              <span className="font-serif text-5xl float-left mr-3 mt-1 text-vintage-burgundy leading-none">K</span>
-                hông phải mọi bản thiết kế đều bắt đầu từ một ý tưởng hoàn hảo. Có những điều được tạo nên qua từng lần chỉnh sửa, từng cuộc trò chuyện và những ngày cùng nhau cố gắng. Chúng mình gặp nhau vì cùng làm design, rồi dần nhận ra điều đẹp nhất mình tạo ra không phải là một sản phẩm, mà là một mối quan hệ.
+                Không phải mọi bản thiết kế đều bắt đầu từ một ý tưởng hoàn hảo. Có những điều được tạo nên qua từng lần chỉnh sửa, từng cuộc trò chuyện và những ngày cùng nhau cố gắng. Chúng mình gặp nhau vì cùng làm design, rồi dần nhận ra điều đẹp nhất mình tạo ra không phải là một sản phẩm, mà là một mối quan hệ.
               </p>
               <p>
                 Đến hôm nay, bản thiết kế ấy vẫn đang được hoàn thiện mỗi ngày—bằng sự thấu hiểu, tôn trọng và lựa chọn đồng hành. Và có lẽ, đây sẽ luôn là project mà cả hai muốn dành nhiều tâm huyết nhất.
