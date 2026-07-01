@@ -8,30 +8,40 @@ export default function VideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Thử ép video tự động chạy bằng cách dùng sự kiện tương tác của người dùng
+  // Dùng IntersectionObserver để tự động chạy video khi cuộn tới
   useEffect(() => {
-    const attemptPlay = () => {
-      if (videoRef.current && videoRef.current.paused) {
-        videoRef.current.play().then(() => {
-          setIsPlaying(true);
-        }).catch(() => {
-          // Trình duyệt vẫn chặn
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    // Đảm bảo playsInline được áp dụng mạnh nhất cho iOS
+    videoElement.setAttribute("playsinline", "true");
+    videoElement.setAttribute("webkit-playsinline", "true");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Khi video xuất hiện trên màn hình, thử chạy nó
+            videoElement.play().then(() => {
+              setIsPlaying(true);
+            }).catch(() => {
+              // Bị trình duyệt chặn
+              setIsPlaying(false);
+            });
+          } else {
+            // Tạm dừng khi cuộn qua khỏi màn hình để tiết kiệm pin
+            videoElement.pause();
+            setIsPlaying(false);
+          }
         });
-      }
-    };
+      },
+      { threshold: 0.5 } // Kích hoạt khi video hiển thị 50%
+    );
 
-    // Khi người dùng cuộn trang hoặc chạm vào màn hình, cố gắng ép video chạy
-    window.addEventListener('touchstart', attemptPlay, { passive: true });
-    window.addEventListener('scroll', attemptPlay, { passive: true });
-    window.addEventListener('click', attemptPlay, { passive: true });
-
-    // Tự động thử một lần lúc component load
-    attemptPlay();
+    observer.observe(videoElement);
 
     return () => {
-      window.removeEventListener('touchstart', attemptPlay);
-      window.removeEventListener('scroll', attemptPlay);
-      window.removeEventListener('click', attemptPlay);
+      observer.unobserve(videoElement);
     };
   }, []);
 
