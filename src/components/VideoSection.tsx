@@ -70,7 +70,7 @@ export default function VideoSection() {
           className="text-center mb-12"
         >
           <p className="font-jetbrains text-[10px] md:text-xs tracking-[0.3em] uppercase text-vintage-olive mb-4">
-            Cuộc Sống Là Một Chuyến Đi
+            The Way We Create
           </p>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-vintage-ink leading-tight tracking-tight italic">
             Cùng Nhau Băng Qua <br/> 
