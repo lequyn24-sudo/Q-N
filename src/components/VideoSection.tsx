@@ -33,13 +33,9 @@ export default function VideoSection() {
           className="relative w-full max-w-4xl aspect-[16/9] md:aspect-video bg-vintage-ivory p-3 shadow-2xl -rotate-1 z-10"
         >
           <div className="w-full h-full relative overflow-hidden bg-vintage-ivory">
-            <video 
-              src="/videos/motorcycle.mp4" 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              poster="/images/hero-lineart.jpg"
+            <img 
+              src="/images/motorcycle.gif" 
+              alt="Couple riding motorcycle"
               className="object-cover w-full h-full grayscale-[40%] sepia-[30%] contrast-110 opacity-90"
             />
             
