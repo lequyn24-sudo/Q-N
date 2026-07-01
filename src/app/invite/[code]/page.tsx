@@ -42,14 +42,6 @@ export default function InvitePage() {
     loadGuest();
   }, [code]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-vintage-bg">
-        <Loader2 className="w-8 h-8 animate-spin text-vintage-ink/50" />
-      </div>
-    );
-  }
-
   if (error) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-vintage-bg text-center px-6">
@@ -67,17 +59,23 @@ export default function InvitePage() {
       <Navigation />
       <BackgroundMusic />
       
-      {/* Truyền tên khách vào Hero */}
-      <Hero guestName={guestData.name} />
+      <Hero />
       
       <Story />
       <VideoSection />
       <Gallery />
       <Timeline />
-      <WeddingDetails />
       
-      {/* Truyền dữ liệu khách vào RSVP để họ xác nhận */}
-      <RSVP guestData={guestData} />
+      {!loading ? (
+        <>
+          <WeddingDetails guestName={guestData?.name} />
+          <RSVP guestData={guestData} />
+        </>
+      ) : (
+        <div className="py-40 flex items-center justify-center bg-vintage-bg">
+          <Loader2 className="w-8 h-8 animate-spin text-vintage-ink/50" />
+        </div>
+      )}
       
       <Guestbook />
       <Footer />

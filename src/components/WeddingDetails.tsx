@@ -5,8 +5,8 @@ import Image from "next/image";
 
 import { useState, useEffect } from "react";
 
-export default function WeddingDetails() {
-  const [guestName, setGuestName] = useState("Bạn");
+export default function WeddingDetails({ guestName: propGuestName }: { guestName?: string }) {
+  const [guestName, setGuestName] = useState(propGuestName || "Bạn");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

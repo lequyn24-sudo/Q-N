@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function Hero({ guestName }: { guestName?: string }) {
+export default function Hero() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -64,12 +64,6 @@ export default function Hero({ guestName }: { guestName?: string }) {
           style={{ y: y2 }}
           className="absolute top-[14%] md:top-[5%] lg:top-[8%] left-[5%] md:left-[2%] lg:left-[2%] xl:left-[4%] z-30 flex flex-col"
         >
-          {guestName && (
-            <div className="absolute -top-16 md:-top-24 left-0 md:left-4 font-serif text-lg md:text-2xl text-[#5C4D3C] whitespace-nowrap italic">
-              Thân mời:<br/>
-              <span className="font-bonthing text-3xl md:text-5xl ml-4 not-italic">{guestName}</span>
-            </div>
-          )}
           <h1 className="font-bonthing text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-none tracking-tight text-[#5C4D3C] whitespace-nowrap embossed-text pt-[1em] pb-[0.5em]">
             Quyn
           </h1>
