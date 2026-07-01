@@ -60,9 +60,9 @@ export default function WeddingDetails({ guestName: propGuestName }: { guestName
               </div>
               
               <div className="border-l-2 border-vintage-dusty-green/30 pl-8">
-                <h3 className="font-serif text-3xl mb-4 text-vintage-ink italic">Quà Tặng</h3>
+                <h3 className="font-serif text-3xl mb-4 text-vintage-ink italic">Lời Cảm Ơn</h3>
                 <p className="font-jetbrains text-xs md:text-sm text-vintage-soft-brown leading-loose text-justify">
-                  Sự hiện diện của bạn đã là món quà tuyệt vời nhất dành cho chúng mình. Tuy nhiên, nếu bạn muốn gửi tặng một món quà nhỏ, sẽ có một khu vực nhận quà tại sảnh tiệc.
+                  Tụi mình biết bạn rất bận rộn, nên việc bạn dành thời gian đến chung vui đã là món quà vô giá và ý nghĩa nhất đối với hai đứa rồi. Chẳng có lời nào diễn tả hết sự biết ơn này. Cảm ơn bạn vì đã ở đây, chứng kiến và chúc phúc cho tình yêu của tụi mình trong ngày trọng đại nhất.
                 </p>
               </div>
             </div>
