@@ -12,8 +12,9 @@ import Navigation from "@/components/Navigation";
 import OpeningAnimation from "@/components/OpeningAnimation";
 import BackgroundMusic from "@/components/BackgroundMusic";
 
-export default async function InvitePage({ params }: { params: { code: string } }) {
-  const code = params.code;
+export default async function InvitePage({ params }: { params: Promise<{ code: string }> }) {
+  const resolvedParams = await params;
+  const code = resolvedParams.code;
 
   // Lấy dữ liệu khách mời trực tiếp trên Server (SSR)
   // Đảm bảo HTML trả về nguyên vẹn 100% giống trang chủ, giúp video tự động chạy (autoplay) trên iOS/Safari
